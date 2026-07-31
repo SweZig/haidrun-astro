@@ -3,8 +3,8 @@
   set without consent). MUST be kept in sync with what the production site actually loads: before
   adding analytics, marketing pixels, chat, video embeds, or a scheduler, add a consent-management
   platform (CMP) with prior opt-in for non-essential cookies (required in the EU/UK) and update the
-  table below. Note: Google Fonts is currently loaded from Google's servers, which transmits the
-  visitor's IP to Google — consider self-hosting fonts to remove that third-party transfer.
+  table below. A cookie-consent banner (CMP) is in place; wire any new analytics/marketing tags through
+  its consent gating. Web fonts are self-hosted (Fontsource) — no third-party font request is made.
   Review/sign-off by counsel required. Confirm all [LEGAL]/[INPUT] flags.
 -->
 <section class="hero legal-hero">
@@ -72,10 +72,10 @@
           <td>180 days</td>
         </tr>
         <tr>
-          <td>Google Fonts (fonts.googleapis.com / fonts.gstatic.com)</td>
-          <td>Third-party request (no cookie)</td>
-          <td>Loads the site’s typefaces. Transmits your IP to Google to deliver fonts.</td>
-          <td>Per request</td>
+          <td>Web fonts (self-hosted)</td>
+          <td>Strictly necessary (no cookie)</td>
+          <td>Typefaces are served from our own domain — no third-party font request and no IP is shared with a font provider.</td>
+          <td>Cached by your browser</td>
         </tr>
         <tr>
           <td>Netlify (hosting / CDN)</td>
@@ -89,9 +89,10 @@
     <p class="legal-flag" style="display:block">[LEGAL: keep this table in sync with production; add rows for any analytics, chat, video, or scheduling tools before they go live.]</p>
 
     <h2 id="thirdparty"><span class="n">4</span>Third-party providers</h2>
-    <p>Some technologies are provided by third parties that process data under their own privacy terms,
-      including Google (fonts) and our hosting/CDN provider. If we later embed scheduling, video, chat, or
-      analytics tools, those providers will be listed here. See our <a href="/privacy/">Privacy Policy</a> for
+    <p>Some technologies are provided by third parties that process data under their own privacy terms —
+      currently our hosting/CDN provider. Our web fonts are self-hosted, so no font request is made to a
+      third party. If we later embed scheduling, video, chat, or analytics tools, those providers will be
+      listed here. See our <a href="/privacy/">Privacy Policy</a> for
       how we handle personal data and international transfers.</p>
 
     <h2 id="consent"><span class="n">5</span>Consent by region</h2>
