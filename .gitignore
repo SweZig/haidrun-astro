@@ -10,3 +10,4 @@ npm-debug.log*
 .env
 _cc_test.mjs
 _shot_cc_*.png
+_chk.mjs

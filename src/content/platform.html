@@ -44,7 +44,7 @@
     <text x="428" y="120" fill="#8b97a5" font-size="11">Build on the SDK</text>
     <line x1="365" y1="213" x2="420" y2="213" stroke="#2A3444" stroke-width="1"/><circle cx="365" cy="213" r="2.5" fill="#2AD0E6"/>
     <text x="428" y="208" fill="#f1f5f9" font-size="12.5" font-weight="600">B2B · REST API</text>
-    <text x="428" y="225" fill="#8b97a5" font-size="11">Plug-and-play, no custom dev</text>
+    <text x="428" y="225" fill="#8b97a5" font-size="11">Plug-and-play, no custom development</text>
     <line x1="365" y1="318" x2="420" y2="318" stroke="#2A3444" stroke-width="1"/><circle cx="365" cy="318" r="2.5" fill="#3DEBAA"/>
     <text x="428" y="313" fill="#f1f5f9" font-size="12.5" font-weight="600">Private Layer 1</text>
     <text x="428" y="330" fill="#8b97a5" font-size="11">Fast, sovereign, interoperable</text>
@@ -54,7 +54,7 @@
   
 </div></div>
       <div class="layers">
-        <div class="layer l1"><span class="tag">Engine · L1</span><div><h3>Engine / Layer 1</h3><p>Haidrun's proprietary blockchain core: the settlement and execution engine. Deterministic, fast and energy-efficient, with native interoperability at the core. Build directly on it with the SDK.</p></div></div>
+        <div class="layer l1"><span class="tag">Engine · L1</span><div><h3>Engine / Layer 1</h3><p>Haidrun’s proprietary blockchain core: the settlement and execution engine. Deterministic, fast and energy-efficient, with native interoperability at the core. Build directly on it with the SDK.</p></div></div>
         <div class="layer l2"><span class="tag">API · B2B</span><div><h3>API layer (B2B)</h3><p>Industry-standard REST APIs secured with TLS 1.3 and mTLS. Connect banks, KYC/AML providers and external payment rails — plug-and-play, no custom development.</p></div></div>
         <div class="layer l3"><span class="tag">App · B2C</span><div><h3>Application layer (B2C)</h3><p>Ship customer apps, wallets and payment experiences on the same foundation, powered by the SDK.</p></div></div>
       </div>
@@ -89,10 +89,10 @@
   
 </div></div>
       <div class="steps">
-        <div class="step"><div class="n">1</div><h4>Setup</h4><p>A private, permissioned network deployed in your perimeter — multi-cloud (Oracle, Google, Azure, AWS) or on-premise. Complete control, no external blockchain dependencies.</p></div>
-        <div class="step"><div class="n">2</div><h4>Issue</h4><p>Mint and burn your own backed stablecoin (HSC model), with reserves, token lifecycle and compliance in your controlled environment. Signing keys stay inside FIPS 140-2 Level 3 HSMs.</p></div>
+        <div class="step"><div class="n">1</div><h4>Setup</h4><p>A private, permissioned network deployed in your perimeter — multi-cloud (Oracle, Google, Azure, AWS) or on-premises. Complete control, no external blockchain dependencies.</p></div>
+        <div class="step"><div class="n">2</div><h4>Issue</h4><p>Mint and burn your own backed stablecoin (HSC model), with reserves, token lifecycle and compliance in your controlled environment. Signing keys stay inside FIPS 140-3 Level 3 HSMs.</p></div>
         <div class="step"><div class="n">3</div><h4>Onboard</h4><p>Automated KYB, wallet provisioning and treasury APIs bring corporate clients and partners onto your network quickly.</p></div>
-        <div class="step"><div class="n">4</div><h4>Scale</h4><p>Extend from B2B to B2C on the same rails, and grow throughput through infrastructure — not architectural redesign.</p></div>
+        <div class="step"><div class="n">4</div><h4>Scale</h4><p>Extend from B2B to B2C on the same rails, and scale throughput with infrastructure — not architectural redesign.</p></div>
       </div>
     </div>
   </section>
@@ -120,7 +120,7 @@
     <div class="wrap">
       <div class="sec-head"><span class="eyebrow"><span class="node"></span>Interoperability &amp; finality</span><h2>Final, and irreversible</h2></div>
       <p style="color:#c4ccd6; max-width:70ch">Interoperability is built in at the core — no external bridges or Layer 2 to weaken security or speed. Haidrun runs an evolved Proof-of-Vote + DPoS consensus with governed validators, delivering deterministic finality: once committed, a transaction is final and irreversible — no forks, no reorganizations, no rollback logic. Haidrun is the authoritative ledger for stablecoin supply, so total supply is always derivable from chain state.</p>
-      <div class="note" style="margin-top:1.4rem"><span class="todo">[ENGINEERING]</span> Consensus: exact technical description to be finalized by the Haidrun engineering team.</div>
+      <div class="note" style="margin-top:1.4rem"><!-- TODO: ENGINEERING --> Consensus: exact technical description to be finalized by the Haidrun engineering team.</div>
     </div>
   </section>
 
@@ -128,14 +128,14 @@
     <div class="wrap">
       <div class="sec-head"><span class="eyebrow"><span class="node"></span>Performance</span><h2>Engineered for institutional scale</h2></div>
       <div class="spec">
-        <div class="row"><span class="k">Throughput (production)</span><span class="v"><span class="grad">15,000–30,000 TPS</span>¹</span></div>
+        <div class="row"><span class="k">Throughput (production)</span><span class="v"><span class="grad">15,000–30,000 TPS</span></span></div>
         <div class="row"><span class="k">End-to-end latency (p99)</span><span class="v">&lt; 350 ms</span></div>
         <div class="row"><span class="k">Transaction finality</span><span class="v">&lt; 500 ms</span></div>
         <div class="row"><span class="k">Availability</span><span class="v">99.99%</span></div>
         <div class="row"><span class="k">Recovery time objective</span><span class="v">&lt; 5 min</span></div>
-        <div class="row"><span class="k">Optimized lab conditions</span><span class="v">up to 65,000 TPS¹</span></div>
+        <div class="row"><span class="k">Optimized lab conditions</span><span class="v">up to 65,000 TPS</span></div>
       </div>
-      <p class="mono" style="color:var(--mist); font-size:.72rem; margin-top:1rem">Documented, zero-downtime path to higher throughput. <span class="todo">[VERIFY figures + methodology]</span></p>
+      <p class="mono" style="color:var(--mist); font-size:.72rem; margin-top:1rem">Documented, zero-downtime path to higher throughput. <!-- TODO: VERIFY figures + methodology --></p>
     </div>
   </section>
 
@@ -143,7 +143,7 @@
     <div class="wrap">
       <div class="feature">
         <div><span class="eyebrow"><span class="node"></span>Deployment</span><p class="lead-copy" style="margin-top:1rem">Your cloud, <span class="grad">or ours</span>.</p></div>
-        <p style="color:#c4ccd6">Deploy on all major clouds — Oracle Cloud, Google Cloud, Microsoft Azure, AWS — or on-premise / private cloud. Multi-availability-zone by default, with zero-downtime scaling and support for geographic expansion.</p>
+        <p style="color:#c4ccd6">Deploy on all major clouds — Oracle Cloud, Google Cloud, Microsoft Azure, AWS — or on-premises / private cloud. Multi-availability-zone by default, with zero-downtime scaling and support for geographic expansion.</p>
       </div>
       <div class="hxCloud">
         <div class="hxCloud-item">Oracle Cloud</div>
@@ -152,7 +152,7 @@
         <div class="hxCloud-item">AWS</div>
         <div class="hxCloud-item">Private / on-prem</div>
       </div>
-      <p class="todo" style="margin-top:1rem">[INPUT: cloud-partner logo rights]</p>
+      <!-- TODO: INPUT: cloud-partner logo rights -->
     </div>
   </section>
 
