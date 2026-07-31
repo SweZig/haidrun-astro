@@ -1,0 +1,258 @@
+<!--
+  Pricing / packaging page. No prices are shown — every tier is "Request a quote".
+  Tiers are structured by transaction volume; feature inclusions are grounded in the technical
+  spec (claude/whitepaper-technical.md, claude/plattform-fakta.md).
+  [INPUT] Confirm the transaction-volume bands and the exact per-tier feature gating with product/
+  commercial before production. Tier names are proposals — easy to rename (see data-nav unaffected).
+  [LEGAL] "Built for compatibility" framing only; no claim of current licensure.
+-->
+<section class="hero legal-hero">
+  <div class="wrap">
+    <div class="eyebrow kicker"><span class="node"></span> Pricing</div>
+    <h1>Priced to your <span class="grad">scale</span>, not a public list</h1>
+    <p class="sub" style="color:var(--mist); font-size:clamp(1.05rem,1.6vw,1.25rem); max-width:60ch; margin-top:1rem">
+      Every Haidrun deployment is a regulated, private network — so packaging follows your transaction
+      volume, the modules you run, where you deploy, and the compliance and support you need. Pick the tier
+      that fits your scale; we'll scope the rest.
+    </p>
+    <div class="pr-ladder">
+      <div class="bar"></div>
+      <div class="ticks">
+        <span class="lo">Pilot</span>
+        <span>Growth</span>
+        <span>Enterprise</span>
+        <span>Institutional</span>
+        <span class="hi">Sovereign</span>
+      </div>
+    </div>
+    <div class="hero-cta" style="margin-top:1.6rem">
+      <div class="btn btn-primary" data-nav="contact">Request a quote</div>
+      <div class="btn btn-ghost" data-nav="platform">Explore the platform</div>
+    </div>
+  </div>
+</section>
+
+<!-- TIER CARDS -->
+<section class="blk" style="padding-top:1.5rem">
+  <div class="wrap">
+    <div class="pr-grid">
+
+      <div class="pr-card">
+        <div class="pr-tier">Pilot</div>
+        <div class="pr-tag">Prove the model in a controlled, production-grade pilot.</div>
+        <div class="pr-vol"><span class="lbl">Transaction volume</span>Up to 1M / month</div>
+        <div class="pr-price">Request a quote<small>Scoped to your pilot</small></div>
+        <div class="pr-cta"><div class="btn btn-ghost" data-nav="contact">Request a quote</div></div>
+        <ul class="pr-list">
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3DEBAA" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Stablecoin issuance (HSC) &amp; payments</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3DEBAA" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Sandbox + limited production</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3DEBAA" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>KYC &amp; tiered client identification</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3DEBAA" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>FIPS 140-2 L3 HSM signing</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3DEBAA" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>REST API + OpenAPI, standard support</li>
+        </ul>
+      </div>
+
+      <div class="pr-card">
+        <div class="pr-tier">Growth</div>
+        <div class="pr-tag">Move into production as your issuance and payments scale.</div>
+        <div class="pr-vol"><span class="lbl">Transaction volume</span>1M – 25M / month</div>
+        <div class="pr-price">Request a quote<small>Everything in Pilot, plus</small></div>
+        <div class="pr-cta"><div class="btn btn-ghost" data-nav="contact">Request a quote</div></div>
+        <ul class="pr-list">
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3DEBAA" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>KYB + beneficial-owner verification</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3DEBAA" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>AML transaction monitoring</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3DEBAA" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Custodial wallets</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3DEBAA" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Native SDK + HVM (EVM contracts)</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3DEBAA" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Priority support</li>
+        </ul>
+      </div>
+
+      <div class="pr-card feat">
+        <span class="pr-badge">Most common</span>
+        <div class="pr-tier">Enterprise</div>
+        <div class="pr-tag">Run regulated money at scale, in your own cloud.</div>
+        <div class="pr-vol"><span class="lbl">Transaction volume</span>25M – 250M / month</div>
+        <div class="pr-price">Request a quote<small>Everything in Growth, plus</small></div>
+        <div class="pr-cta"><div class="btn btn-primary" data-nav="contact">Request a quote</div></div>
+        <ul class="pr-list">
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3DEBAA" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Treasury &amp; reserves + on-chain attestation</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3DEBAA" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Tokenization engine</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3DEBAA" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Sanctions &amp; PEP screening (EU/UN/OFAC)</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3DEBAA" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Dedicated HSM · deploy in your cloud</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3DEBAA" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>24×7 support + uptime SLA</li>
+        </ul>
+      </div>
+
+      <div class="pr-card">
+        <div class="pr-tier">Institutional</div>
+        <div class="pr-tag">Bank-grade operation inside your own perimeter.</div>
+        <div class="pr-vol"><span class="lbl">Transaction volume</span>250M – 1B+ / month</div>
+        <div class="pr-price">Request a quote<small>Everything in Enterprise, plus</small></div>
+        <div class="pr-cta"><div class="btn btn-ghost" data-nav="contact">Request a quote</div></div>
+        <ul class="pr-list">
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3DEBAA" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Full real-world-asset (RWA) suite</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3DEBAA" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Consumer / B2C apps on the SDK</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3DEBAA" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Case management + SAR + EDD</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3DEBAA" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Per-client HSM · dedicated pen-testing</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3DEBAA" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Private cloud / on-prem · dedicated TAM</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- SOVEREIGN BAND -->
+    <div class="pr-sov">
+      <div class="l">
+        <div class="pr-tier">Sovereign</div>
+        <p>Market-infrastructure scale — national payment schemes, market infrastructures and
+          central-bank-adjacent programs. Unlimited volume, fully bespoke and sovereign / air-gapped
+          deployment, with dedicated engineering, compliance and 24×7 operations. Everything in
+          Institutional, tailored end to end.</p>
+      </div>
+      <div class="btn btn-primary" data-nav="contact" style="white-space:nowrap">Talk to us</div>
+    </div>
+  </div>
+</section>
+
+<!-- EVERY PLAN INCLUDES -->
+<section class="blk" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow"><span class="node"></span> Included in every plan</div>
+      <h2>The non-negotiables, at every tier</h2>
+      <p>Some things aren't an upsell. Every Haidrun network — from Pilot to Sovereign — ships with the
+        performance, security and compliance foundation built into the protocol.</p>
+    </div>
+    <div class="pr-core">
+      <div class="it"><div class="k">Performance</div><h4>Deterministic finality</h4><p>Final, irreversible settlement in under 500&nbsp;ms — no forks, no reorgs — at 99.99% availability with an RTO under 5 minutes.</p></div>
+      <div class="it"><div class="k">Security</div><h4>HSM-first by default</h4><p>All signing keys in FIPS 140-2 Level&nbsp;3 HSMs, TLS 1.3 / mTLS, AES-256 at rest, RBAC + MFA, and an immutable 7-year audit trail.</p></div>
+      <div class="it"><div class="k">Compliance</div><h4>Compliance by construction</h4><p>KYC, AML and reserve controls live in the core data model — built for compatibility with MiCA, the GENIUS Act, FATF and VARA. <span class="todo">[legal sign-off]</span></p></div>
+      <div class="it"><div class="k">Architecture</div><h4>EVM-compatible HVM</h4><p>Deploy Solidity with standard EVM tooling and parallel execution on your private Layer&nbsp;1.</p></div>
+      <div class="it"><div class="k">Deploy anywhere</div><h4>Your cloud or ours</h4><p>Oracle Cloud, Google Cloud, Azure or AWS — or private cloud / on-premise — multi-AZ by default.</p></div>
+      <div class="it"><div class="k">Integration</div><h4>Standard APIs &amp; SDK</h4><p>Versioned REST APIs (OAuth 2.0 + JWT), auto-generated OpenAPI specs, and a native SDK to build on.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- COMPARISON MATRIX -->
+<section class="blk">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow"><span class="node"></span> Compare tiers</div>
+      <h2>What's in each package</h2>
+      <p>A closer look at how capacity, modules, compliance, security, deployment and support step up across
+        the five tiers. All pricing is by quote.</p>
+    </div>
+
+    <div class="pr-matrix-wrap">
+      <table class="pr-matrix">
+        <thead>
+          <tr>
+            <th>Capability</th>
+            <th>Pilot<span>Up to 1M/mo</span></th>
+            <th>Growth<span>1M–25M/mo</span></th>
+            <th class="feat-col">Enterprise<span>25M–250M/mo</span></th>
+            <th>Institutional<span>250M–1B+/mo</span></th>
+            <th>Sovereign<span>Custom</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="grp"><td colspan="6">Capacity</td></tr>
+          <tr><td>Monthly transaction volume</td><td class="val">Up to 1M</td><td class="val">1M–25M</td><td class="val feat-col">25M–250M</td><td class="val">250M–1B+</td><td class="val">Unlimited</td></tr>
+          <tr><td>Sustained throughput</td><td class="val">Shared</td><td class="val">Dedicated tier</td><td class="val feat-col">High</td><td class="val">15k–30k TPS</td><td class="val">Bespoke¹</td></tr>
+          <tr><td>Transaction finality</td><td class="val">&lt;500 ms</td><td class="val">&lt;500 ms</td><td class="val feat-col">&lt;500 ms</td><td class="val">&lt;500 ms</td><td class="val">&lt;500 ms</td></tr>
+          <tr><td>Availability SLA</td><td class="val">99.99%</td><td class="val">99.99%</td><td class="val feat-col">99.99%</td><td class="val">99.99%</td><td class="val">99.99%+</td></tr>
+          <tr><td>Environments</td><td class="val">Sandbox</td><td class="val">+ Staging</td><td class="val feat-col">+ Production</td><td class="val">Multi-region</td><td class="val">Multi-region + DR</td></tr>
+
+          <tr class="grp"><td colspan="6">Money modules</td></tr>
+          <tr><td>Stablecoin issuance (HSC)</td><td><span class="pr-yes">✓</span></td><td><span class="pr-yes">✓</span></td><td class="feat-col"><span class="pr-yes">✓</span></td><td><span class="pr-yes">✓</span></td><td><span class="pr-yes">✓</span></td></tr>
+          <tr><td>Payments &amp; settlement</td><td><span class="pr-yes">✓</span></td><td><span class="pr-yes">✓</span></td><td class="feat-col"><span class="pr-yes">✓</span></td><td><span class="pr-yes">✓</span></td><td><span class="pr-yes">✓</span></td></tr>
+          <tr><td>Custodial wallets</td><td><span class="pr-no">—</span></td><td><span class="pr-yes">✓</span></td><td class="feat-col"><span class="pr-yes">✓</span></td><td><span class="pr-yes">✓</span></td><td><span class="pr-yes">✓</span></td></tr>
+          <tr><td>Treasury &amp; reserves + attestation</td><td><span class="pr-no">—</span></td><td><span class="pr-no">—</span></td><td class="feat-col"><span class="pr-yes">✓</span></td><td><span class="pr-yes">✓</span></td><td><span class="pr-yes">✓</span></td></tr>
+          <tr><td>Tokenization</td><td><span class="pr-no">—</span></td><td><span class="pr-no">—</span></td><td class="feat-col"><span class="pr-yes">✓</span></td><td><span class="pr-yes">✓</span></td><td><span class="pr-yes">✓</span></td></tr>
+          <tr><td>Real-world assets (RWA) suite</td><td><span class="pr-no">—</span></td><td><span class="pr-no">—</span></td><td class="val feat-col">Add-on</td><td><span class="pr-yes">✓</span></td><td><span class="pr-yes">✓</span></td></tr>
+          <tr><td>Consumer / B2C apps (SDK)</td><td><span class="pr-no">—</span></td><td><span class="pr-no">—</span></td><td class="feat-col"><span class="pr-no">—</span></td><td><span class="pr-yes">✓</span></td><td><span class="pr-yes">✓</span></td></tr>
+
+          <tr class="grp"><td colspan="6">Compliance — KYB / KYC / AML</td></tr>
+          <tr><td>KYC + tiered identification</td><td><span class="pr-yes">✓</span></td><td><span class="pr-yes">✓</span></td><td class="feat-col"><span class="pr-yes">✓</span></td><td><span class="pr-yes">✓</span></td><td><span class="pr-yes">✓</span></td></tr>
+          <tr><td>KYB + beneficial-owner verification</td><td><span class="pr-no">—</span></td><td><span class="pr-yes">✓</span></td><td class="feat-col"><span class="pr-yes">✓</span></td><td><span class="pr-yes">✓</span></td><td><span class="pr-yes">✓</span></td></tr>
+          <tr><td>AML transaction monitoring</td><td><span class="pr-no">—</span></td><td><span class="pr-yes">✓</span></td><td class="feat-col"><span class="pr-yes">✓</span></td><td><span class="pr-yes">✓</span></td><td><span class="pr-yes">✓</span></td></tr>
+          <tr><td>Sanctions &amp; PEP screening (EU/UN/OFAC)</td><td><span class="pr-no">—</span></td><td class="val">Basic</td><td class="val feat-col">Full</td><td class="val">Full</td><td class="val">Full</td></tr>
+          <tr><td>Dynamic risk scoring + risk-based limits</td><td><span class="pr-no">—</span></td><td><span class="pr-no">—</span></td><td class="feat-col"><span class="pr-yes">✓</span></td><td><span class="pr-yes">✓</span></td><td><span class="pr-yes">✓</span></td></tr>
+          <tr><td>Case management + SAR generation</td><td><span class="pr-no">—</span></td><td><span class="pr-no">—</span></td><td class="feat-col"><span class="pr-no">—</span></td><td><span class="pr-yes">✓</span></td><td><span class="pr-yes">✓</span></td></tr>
+          <tr><td>Enhanced due diligence (EDD)</td><td><span class="pr-no">—</span></td><td><span class="pr-no">—</span></td><td class="feat-col"><span class="pr-no">—</span></td><td><span class="pr-yes">✓</span></td><td><span class="pr-yes">✓</span></td></tr>
+          <tr><td>Reserve attestation (MiCA / GENIUS)</td><td><span class="pr-no">—</span></td><td><span class="pr-no">—</span></td><td class="val feat-col">Monthly</td><td class="val">Real-time</td><td class="val">Real-time</td></tr>
+
+          <tr class="grp"><td colspan="6">Security</td></tr>
+          <tr><td>FIPS 140-2 L3 HSM signing</td><td class="val">Shared</td><td class="val">Shared</td><td class="val feat-col">Dedicated</td><td class="val">Per-client</td><td class="val">Sovereign</td></tr>
+          <tr><td>TLS 1.3 / mTLS · WAF · DDoS · AES-256 · PII</td><td><span class="pr-yes">✓</span></td><td><span class="pr-yes">✓</span></td><td class="feat-col"><span class="pr-yes">✓</span></td><td><span class="pr-yes">✓</span></td><td><span class="pr-yes">✓</span></td></tr>
+          <tr><td>RBAC + MFA + just-in-time access</td><td><span class="pr-yes">✓</span></td><td><span class="pr-yes">✓</span></td><td class="feat-col"><span class="pr-yes">✓</span></td><td><span class="pr-yes">✓</span></td><td><span class="pr-yes">✓</span></td></tr>
+          <tr><td>Immutable audit trail (7-year)</td><td><span class="pr-yes">✓</span></td><td><span class="pr-yes">✓</span></td><td class="feat-col"><span class="pr-yes">✓</span></td><td><span class="pr-yes">✓</span></td><td><span class="pr-yes">✓</span></td></tr>
+          <tr><td>Third-party penetration testing</td><td><span class="pr-no">—</span></td><td class="val">Shared reports</td><td class="val feat-col">Shared reports</td><td class="val">Dedicated</td><td class="val">Dedicated</td></tr>
+          <tr><td>Data sovereignty (own perimeter)</td><td><span class="pr-no">—</span></td><td><span class="pr-no">—</span></td><td class="val feat-col">Your cloud</td><td class="val">Private / on-prem</td><td class="val">Air-gapped</td></tr>
+
+          <tr class="grp"><td colspan="6">Deployment &amp; operations</td></tr>
+          <tr><td>Deployment model</td><td class="val">Managed</td><td class="val">Managed</td><td class="val feat-col">Your cloud</td><td class="val">Private / on-prem</td><td class="val">Sovereign</td></tr>
+          <tr><td>Clouds (Oracle / Google / Azure / AWS)</td><td><span class="pr-yes">✓</span></td><td><span class="pr-yes">✓</span></td><td class="feat-col"><span class="pr-yes">✓</span></td><td><span class="pr-yes">✓</span></td><td><span class="pr-yes">✓</span></td></tr>
+          <tr><td>Multi-AZ / multi-region</td><td class="val">Multi-AZ</td><td class="val">Multi-AZ</td><td class="val feat-col">+ Multi-region</td><td class="val">+ Multi-region</td><td class="val">+ DR</td></tr>
+
+          <tr class="grp"><td colspan="6">Developer</td></tr>
+          <tr><td>REST API + OpenAPI + sandbox keys</td><td><span class="pr-yes">✓</span></td><td><span class="pr-yes">✓</span></td><td class="feat-col"><span class="pr-yes">✓</span></td><td><span class="pr-yes">✓</span></td><td><span class="pr-yes">✓</span></td></tr>
+          <tr><td>Native SDK + HVM (EVM contracts)</td><td><span class="pr-no">—</span></td><td><span class="pr-yes">✓</span></td><td class="feat-col"><span class="pr-yes">✓</span></td><td><span class="pr-yes">✓</span></td><td><span class="pr-yes">✓</span></td></tr>
+          <tr><td>Custom endpoints / dedicated integration</td><td><span class="pr-no">—</span></td><td><span class="pr-no">—</span></td><td class="feat-col"><span class="pr-no">—</span></td><td><span class="pr-yes">✓</span></td><td><span class="pr-yes">✓</span></td></tr>
+
+          <tr class="grp"><td colspan="6">Support &amp; success</td></tr>
+          <tr><td>Support</td><td class="val">Standard</td><td class="val">Priority</td><td class="val feat-col">24×7</td><td class="val">24×7 + TAM</td><td class="val">Dedicated team</td></tr>
+          <tr><td>Onboarding</td><td class="val">Self-serve</td><td class="val">Guided</td><td class="val feat-col">Guided</td><td class="val">White-glove</td><td class="val">Dedicated</td></tr>
+          <tr><td>Uptime SLA credits</td><td><span class="pr-no">—</span></td><td><span class="pr-no">—</span></td><td class="feat-col"><span class="pr-yes">✓</span></td><td><span class="pr-yes">✓</span></td><td><span class="pr-yes">✓</span></td></tr>
+          <tr><td>Pricing</td><td class="val">Request a quote</td><td class="val">Request a quote</td><td class="val feat-col">Request a quote</td><td class="val">Request a quote</td><td class="val">Request a quote</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="color:var(--mist); font-size:.78rem; margin-top:.9rem">¹ 15,000–30,000 TPS in production depending on infrastructure; up to 65,000 TPS in optimized lab conditions. <span class="todo">[VERIFY]</span> · Volume bands are indicative and confirmed per engagement. <span class="todo">[INPUT: confirm bands]</span></p>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- HOW PRICING WORKS -->
+<section class="blk">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow"><span class="node"></span> How pricing works</div>
+      <h2>Why it's a quote, not a price tag</h2>
+      <p>A regulated, private money network is never one-size-fits-all. We scope each engagement to a few
+        clear variables — then give you a single, predictable commercial model.</p>
+    </div>
+    <div class="pr-how">
+      <div class="step"><div class="n">01</div><h4>Your scale</h4><p>Transaction volume and throughput set the tier — from a controlled pilot to market-infrastructure scale.</p></div>
+      <div class="step"><div class="n">02</div><h4>Your build</h4><p>The modules you run (issuance, payments, treasury, tokenization, RWA, consumer) and where you deploy — our cloud, yours, or on-prem.</p></div>
+      <div class="step"><div class="n">03</div><h4>Your obligations</h4><p>The compliance depth, security package and support/SLA your regulators and operations require.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="blk" style="padding-top:0">
+  <div class="wrap">
+    <div class="pr-faq">
+      <details><summary>Why don't you publish prices?</summary><p>Because every Haidrun deployment is a private, regulated network scoped to your volume, modules, deployment model and compliance needs. A public price list would misrepresent that. We move quickly to a clear quote once we understand your scale.</p></details>
+      <details><summary>How is transaction volume measured?</summary><p>By the monthly volume of on-network transactions across the modules you run. The bands above are indicative; we confirm the exact definition and thresholds during scoping.</p></details>
+      <details><summary>Can we move between tiers?</summary><p>Yes. Throughput scales through infrastructure with a documented, zero-downtime path, so you can step up as your volume grows without re-architecting.</p></details>
+      <details><summary>Is this the price for the whole platform?</summary><p>Pricing covers the Haidrun platform and the modules in your tier. This page is informational and not an offer; the applicable commercial agreement governs the engagement.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="blk">
+  <div class="wrap">
+    <div class="cta">
+      <h2>Tell us your volume — we'll scope a package</h2>
+      <p>Share where you are today and where you're heading. We'll map you to the right tier and put a clear quote in front of you.</p>
+      <div class="row"><div class="btn btn-primary" data-nav="contact">Request a quote</div><div class="btn btn-ghost" data-nav="contact">Talk to our team</div></div>
+    </div>
+  </div>
+</section>
