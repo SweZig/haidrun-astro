@@ -75,6 +75,27 @@ const orgSchema = {
 <body>
   <Fragment set:html={headerHtml} />
 
+  <div class="mnav" id="mobile-nav" aria-hidden="true">
+    <nav class="mnav-inner">
+      <a data-nav="platform">Platform</a>
+      <div class="mnav-group">
+        <div class="mnav-label">Solutions</div>
+        <a data-nav="solutions">All solutions</a>
+        <a data-nav="stablecoin-issuance">Stablecoin Issuance</a>
+        <a data-nav="payments">Payments &amp; Settlement</a>
+        <a data-nav="tokenization">Tokenization</a>
+        <a data-nav="treasury">Treasury &amp; Reserves</a>
+        <a data-nav="consumer">Consumer &amp; B2C</a>
+      </div>
+      <a data-nav="rwa">RWA</a>
+      <a data-nav="developers">Developers</a>
+      <a data-nav="security">Security</a>
+      <a data-nav="pricing">Pricing</a>
+      <a data-nav="company">Company</a>
+      <div class="btn btn-primary mnav-cta" data-nav="contact">Request a demo</div>
+    </nav>
+  </div>
+
   <main>
     <slot />
   </main>
@@ -187,6 +208,29 @@ const orgSchema = {
       el.addEventListener('click', () => { window.location.href = url; });
       if (url === current) el.classList.add('active');
     });
+  </script>
+
+  <!-- Mobile navigation (hamburger) -->
+  <script is:inline>
+    (function () {
+      var burger = document.querySelector('.nav-burger');
+      var mnav = document.getElementById('mobile-nav');
+      if (!burger || !mnav) return;
+      function setOpen(o) {
+        burger.classList.toggle('open', o);
+        mnav.classList.toggle('open', o);
+        burger.setAttribute('aria-expanded', o ? 'true' : 'false');
+        burger.setAttribute('aria-label', o ? 'Close menu' : 'Open menu');
+        mnav.setAttribute('aria-hidden', o ? 'false' : 'true');
+        document.body.style.overflow = o ? 'hidden' : '';
+      }
+      burger.addEventListener('click', function () { setOpen(!mnav.classList.contains('open')); });
+      mnav.querySelectorAll('[data-nav]').forEach(function (a) {
+        a.addEventListener('click', function () { setOpen(false); });
+      });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setOpen(false); });
+      window.addEventListener('resize', function () { if (window.innerWidth > 940) setOpen(false); });
+    })();
   </script>
 
   <!-- Preserved animation scripts (node network + count-up), guarded -->
