@@ -8,3 +8,5 @@ _shot*.mjs
 npm-debug.log*
 .DS_Store
 .env
+_cc_test.mjs
+_shot_cc_*.png

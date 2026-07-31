@@ -3,6 +3,7 @@ import '../styles/global.css';
 import headerHtml from '../content/_header.html?raw';
 import footerHtml from '../content/_footer.html?raw';
 import scriptsRaw from '../content/_scripts.js?raw';
+import consentHtml from '../content/_consent.html?raw';
 import NAVMAP from '../content/_navmap.json';
 
 export interface Props {
@@ -74,6 +75,101 @@ const orgSchema = {
   <Fragment set:html={footerHtml} />
 
   <div class="beta">Site v0.99A · staging</div>
+
+  <!-- Cookie consent (CMP) -->
+  <Fragment set:html={consentHtml} />
+  <script is:inline>
+    (function () {
+      var NAME = 'haidrun_consent';
+      var VERSION = 1;          // bump to re-ask everyone
+      var MAX_AGE = 60 * 60 * 24 * 180; // 180 days
+
+      function readConsent() {
+        var m = document.cookie.match(/(?:^|;\s*)haidrun_consent=([^;]+)/);
+        if (!m) return null;
+        try {
+          var c = JSON.parse(decodeURIComponent(m[1]));
+          if (!c || c.v !== VERSION) return null;
+          return c;
+        } catch (e) { return null; }
+      }
+      function writeConsent(analytics, marketing) {
+        var c = { v: VERSION, necessary: true, analytics: !!analytics, marketing: !!marketing, t: new Date().toISOString() };
+        var secure = location.protocol === 'https:' ? '; Secure' : '';
+        document.cookie = NAME + '=' + encodeURIComponent(JSON.stringify(c)) +
+          '; Max-Age=' + MAX_AGE + '; Path=/; SameSite=Lax' + secure;
+        apply(c);
+        return c;
+      }
+      // Activate scripts gated behind a category. Author gated tags with
+      // type="text/plain" and data-consent="analytics"; they run only after consent.
+      function activate(cat) {
+        document.querySelectorAll('script[type="text/plain"][data-consent="' + cat + '"]').forEach(function (s) {
+          if (s.dataset.ccActivated) return;
+          var n = document.createElement('script');
+          for (var i = 0; i < s.attributes.length; i++) {
+            var a = s.attributes[i];
+            if (a.name === 'type' || a.name === 'data-consent') continue;
+            n.setAttribute(a.name, a.value);
+          }
+          n.text = s.textContent;
+          s.dataset.ccActivated = '1';
+          s.parentNode.insertBefore(n, s.nextSibling);
+        });
+      }
+      function apply(c) {
+        if (c.analytics) activate('analytics');
+        if (c.marketing) activate('marketing');
+        document.dispatchEvent(new CustomEvent('haidrun:consent', { detail: c }));
+      }
+
+      var banner = document.getElementById('cc-banner');
+      var modal = document.getElementById('cc-modal');
+      var inA = document.getElementById('cc-analytics');
+      var inM = document.getElementById('cc-marketing');
+
+      function showBanner(v) {
+        if (!banner) return;
+        banner.classList.toggle('show', v);
+        banner.setAttribute('aria-hidden', v ? 'false' : 'true');
+      }
+      function openModal() {
+        var c = readConsent();
+        if (inA) inA.checked = c ? !!c.analytics : false;
+        if (inM) inM.checked = c ? !!c.marketing : false;
+        modal.classList.add('show');
+        modal.setAttribute('aria-hidden', 'false');
+      }
+      function closeModal() {
+        modal.classList.remove('show');
+        modal.setAttribute('aria-hidden', 'true');
+      }
+
+      function on(id, fn) { var el = document.getElementById(id); if (el) el.addEventListener('click', fn); }
+      on('cc-accept-all', function () { writeConsent(true, true); showBanner(false); closeModal(); });
+      on('cc-reject-all', function () { writeConsent(false, false); showBanner(false); });
+      on('cc-customize', openModal);
+      on('cc-save', function () { writeConsent(inA && inA.checked, inM && inM.checked); showBanner(false); closeModal(); });
+      on('cc-modal-reject', function () { writeConsent(false, false); showBanner(false); closeModal(); });
+      on('cc-modal-close', closeModal);
+      if (modal) modal.addEventListener('click', function (e) { if (e.target === modal) closeModal(); });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && modal.classList.contains('show')) closeModal(); });
+
+      // Persistent re-open control (e.g. footer "Cookie settings")
+      document.querySelectorAll('[data-cc-open]').forEach(function (el) {
+        el.classList.add('cc-open');
+        el.addEventListener('click', function (e) { e.preventDefault(); openModal(); });
+      });
+
+      // Public API
+      window.HaidrunConsent = { get: readConsent, open: openModal, set: writeConsent };
+
+      // Init: honour existing consent, otherwise prompt
+      var existing = readConsent();
+      if (existing) { apply(existing); showBanner(false); }
+      else { showBanner(true); }
+    })();
+  </script>
 
   <!-- Multipage nav: turn data-nav elements into real links -->
   <script is:inline define:vars={{ NAVMAP, current: path }}>

@@ -1,0 +1,72 @@
+<!--
+  [LEGAL] Cookie consent (CMP). Granular cookie consent is intentionally NOT bundled with
+  acceptance of the Terms — GDPR requires cookie consent to be specific and freely given.
+  The banner references the Terms/Privacy/Cookie policies for transparency; cookie choices are
+  separate toggles. Confirm wording with counsel. Categories currently gate nothing (no analytics/
+  marketing tools live yet) — add scripts as <script type="text/plain" data-consent="analytics">…
+  and they will run only after consent.
+-->
+<div class="cc-banner" id="cc-banner" role="region" aria-label="Cookie consent" aria-hidden="true">
+  <div class="cc-title">We value your privacy</div>
+  <div class="cc-text">
+    We use strictly necessary cookies to run this site and, only with your consent, analytics
+    cookies to improve it. By continuing to use haidrun.io you agree to our
+    <a href="/terms/">Terms of Use</a> and <a href="/privacy/">Privacy Policy</a>. See our
+    <a href="/cookies/">Cookie Policy</a> for details.
+  </div>
+  <div class="cc-actions">
+    <button type="button" class="cc-btn cc-accept" id="cc-accept-all">Accept all</button>
+    <button type="button" class="cc-btn cc-reject" id="cc-reject-all">Reject non-essential</button>
+    <button type="button" class="cc-btn cc-custom" id="cc-customize">Customize</button>
+  </div>
+</div>
+
+<div class="cc-modal" id="cc-modal" role="dialog" aria-modal="true" aria-labelledby="cc-modal-title" aria-hidden="true">
+  <div class="cc-panel">
+    <h2 id="cc-modal-title">Cookie preferences</h2>
+    <p class="cc-intro">
+      Choose which cookies we may use. Strictly necessary cookies are always on. You can change
+      your choice any time via “Cookie settings” in the footer. More detail is in our
+      <a href="/cookies/">Cookie Policy</a>.
+    </p>
+
+    <div class="cc-cat">
+      <div>
+        <div class="cc-cat-h">Strictly necessary</div>
+        <p>Required to run the site securely and to remember your cookie choice. Always active.</p>
+      </div>
+      <label class="cc-switch" aria-label="Strictly necessary cookies (always on)">
+        <input type="checkbox" checked disabled>
+        <span class="cc-slider"></span>
+      </label>
+    </div>
+
+    <div class="cc-cat">
+      <div>
+        <div class="cc-cat-h">Analytics</div>
+        <p>Help us understand how the site is used so we can improve it. Off by default.</p>
+      </div>
+      <label class="cc-switch" aria-label="Analytics cookies">
+        <input type="checkbox" id="cc-analytics">
+        <span class="cc-slider"></span>
+      </label>
+    </div>
+
+    <div class="cc-cat">
+      <div>
+        <div class="cc-cat-h">Marketing</div>
+        <p>Measure campaigns and show relevant content. Off by default.</p>
+      </div>
+      <label class="cc-switch" aria-label="Marketing cookies">
+        <input type="checkbox" id="cc-marketing">
+        <span class="cc-slider"></span>
+      </label>
+    </div>
+
+    <div class="cc-actions">
+      <button type="button" class="cc-btn cc-accept" id="cc-save">Save preferences</button>
+      <button type="button" class="cc-btn cc-reject" id="cc-modal-reject">Reject non-essential</button>
+      <button type="button" class="cc-btn cc-custom" id="cc-modal-close">Close</button>
+    </div>
+  </div>
+</div>
