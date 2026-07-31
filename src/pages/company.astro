@@ -1,0 +1,7 @@
+---
+import Layout from '../layouts/Layout.astro';
+import body from '../content/company.html?raw';
+---
+<Layout title="Company — Haidrun" description="Haidrun AB — the team building private infrastructure for regulated digital money." path="/company">
+  <Fragment set:html={body} />
+</Layout>

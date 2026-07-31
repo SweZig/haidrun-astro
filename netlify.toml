@@ -1,0 +1,9 @@
+# Netlify staging config — Haidrun (Astro)
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+  # Staging: leave PUBLIC_INDEXABLE unset/false so pages emit noindex.
+  # At production launch set PUBLIC_INDEXABLE = "true" and replace public/robots.txt.

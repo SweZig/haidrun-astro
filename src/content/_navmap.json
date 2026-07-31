@@ -1,0 +1,15 @@
+{
+  "home": "/",
+  "platform": "/platform",
+  "solutions": "/solutions",
+  "stablecoin-issuance": "/solutions/stablecoin-issuance",
+  "payments": "/solutions/payments",
+  "tokenization": "/solutions/tokenization",
+  "rwa": "/rwa",
+  "treasury": "/solutions/treasury",
+  "consumer": "/solutions/consumer",
+  "security": "/security",
+  "developers": "/developers",
+  "company": "/company",
+  "contact": "/contact"
+}

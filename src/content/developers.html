@@ -1,0 +1,49 @@
+<div class="page" id="page-developers">
+  <div class="hero"><div class="wrap hero-inner">
+    <span class="eyebrow kicker"><span class="node"></span>Developers</span>
+    <h1>Built <span class="grad">API-first</span></h1>
+    <p class="sub">Integrate in weeks with industry-standard REST APIs — or build directly on Layer 1 with our SDK and EVM-compatible smart contracts. OAuth 2.0 security, OpenAPI specs, and deterministic execution.</p>
+    <div class="hero-cta"><a class="btn btn-primary" href="https://docs.haidrun.io">Read the docs →</a><div class="btn btn-ghost" data-nav="contact">Request access</div></div>
+  </div></div>
+  <section class="blk"><div class="wrap">
+    <div class="sec-head"><span class="eyebrow"><span class="node"></span>What you get</span></div>
+    <div class="cards">
+      <div class="card"><div class="ic">REST API</div><h3>Clean, versioned endpoints</h3><p>Secured with OAuth 2.0 + JWT and TLS 1.3 / mTLS. Core endpoints: authentication, transactions, KYC/KYB, wallets, and complaints (MiCA Art. 71).</p></div>
+      <div class="card"><div class="ic">SDK</div><h3>Build directly on Layer 1</h3><p>Deploy on the Haidrun Network without third-party API overhead — full access to the settlement and execution engine.</p></div>
+      <div class="card"><div class="ic">HVM / Solidity</div><h3>EVM-compatible contracts</h3><p>Deploy Solidity contracts using standard tooling, with parallel, deterministic execution.</p></div>
+      <div class="card"><div class="ic">OpenAPI</div><h3>Specs from the API</h3><p>Documentation generated from the API itself, so references stay in sync with the running implementation.</p></div>
+    </div>
+  </div></section>
+  <section class="blk"><div class="wrap">
+    <div class="sec-head"><span class="eyebrow"><span class="node"></span>Quickstart</span><h2>Credentials to confirmed transaction in three steps</h2></div>
+    <div class="steps">
+      <div class="step"><div class="n">1</div><h4>Get credentials</h4><p>Authenticate with OAuth 2.0 and receive your access token.</p></div>
+      <div class="step"><div class="n">2</div><h4>Call the API</h4><p>Submit a transaction or query wallets over REST.</p></div>
+      <div class="step"><div class="n">3</div><h4>Confirm</h4><p>Receive a webhook with the transaction hash and finality in under 500 ms.</p></div>
+    </div>
+  </div></section>
+  <section class="blk"><div class="wrap feature">
+    <div>
+      <span class="eyebrow"><span class="node"></span>Illustrative</span>
+      <p class="lead-copy" style="margin:.9rem 0 .8rem">Mint a stablecoin with a <span class="grad">single call</span>.</p>
+      <p style="color:var(--mist)">Issue against your reserves with a REST call — signing keys stay inside FIPS 140-2 Level 3 HSMs, settlement is deterministic and final.</p>
+      <p class="mono" style="color:var(--mist); font-size:.72rem; margin-top:.9rem">Illustrative only — final API reference lives in the docs.</p>
+    </div>
+    <div class="terminal"><div class="bar"><i></i><i></i><i></i><span>POST · api.haidrun.io</span></div>
+<pre><span class="k">POST</span> /v1/stablecoins/{id}/mint
+<span class="c">Authorization:</span> Bearer •••
+
+{
+  <span class="k">"amount"</span>: <span class="s">"1000000"</span>,
+  <span class="k">"to"</span>: <span class="s">"0x…"</span>,
+  <span class="k">"reference"</span>: <span class="s">"treasury-01"</span>
+}
+
+<span class="c">→ 201 Created</span>
+{ <span class="k">"status"</span>: <span class="v">"settled"</span>, <span class="k">"tx"</span>: <span class="s">"0x…"</span> }</pre>
+    </div>
+  </div></section>
+  <section class="blk"><div class="wrap"><div class="cta"><h2>Start building on Haidrun</h2><p>Read the documentation, or request access and tell us what you're building.</p><div class="row"><a class="btn btn-primary" href="https://docs.haidrun.io">Read the docs →</a><div class="btn btn-ghost" data-nav="contact">Request access</div></div></div></div></section>
+</div>
+
+<!-- ============================ COMPANY ============================ -->

@@ -1,0 +1,92 @@
+---
+import '../styles/global.css';
+import headerHtml from '../content/_header.html?raw';
+import footerHtml from '../content/_footer.html?raw';
+import scriptsRaw from '../content/_scripts.js?raw';
+import NAVMAP from '../content/_navmap.json';
+
+export interface Props {
+  title: string;
+  description: string;
+  path: string;
+}
+const { title, description, path } = Astro.props;
+const site = Astro.site ?? new URL('https://haidrun.io');
+const canonical = new URL(path, site).href;
+const ogImage = new URL('/og-default.png', site).href;
+
+// Staging guard: default to NON-indexable. Flip PUBLIC_INDEXABLE=true at production launch.
+const indexable = import.meta.env.PUBLIC_INDEXABLE === 'true';
+
+const orgSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'Haidrun',
+  legalName: 'Haidrun AB',
+  url: 'https://haidrun.io',
+  sameAs: [
+    'https://www.linkedin.com/company/haidrun',
+    'https://github.com/haidrun',
+  ],
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Stockholm',
+    addressCountry: 'SE',
+  },
+};
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <link rel="canonical" href={canonical} />
+  {!indexable && <meta name="robots" content="noindex, nofollow" />}
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Haidrun" />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content={canonical} />
+  <meta property="og:image" content={ogImage} />
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={ogImage} />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <script type="application/ld+json" set:html={JSON.stringify(orgSchema)} />
+</head>
+<body>
+  <Fragment set:html={headerHtml} />
+
+  <main>
+    <slot />
+  </main>
+
+  <Fragment set:html={footerHtml} />
+
+  <div class="beta">Site v0.99A · staging</div>
+
+  <!-- Multipage nav: turn data-nav elements into real links -->
+  <script is:inline define:vars={{ NAVMAP, current: path }}>
+    document.querySelectorAll('[data-nav]').forEach((el) => {
+      const url = NAVMAP[el.dataset.nav];
+      if (!url) return;
+      el.style.cursor = 'pointer';
+      el.addEventListener('click', () => { window.location.href = url; });
+      if (url === current) el.classList.add('active');
+    });
+  </script>
+
+  <!-- Preserved animation scripts (node network + count-up), guarded -->
+  <script is:inline set:html={scriptsRaw} />
+</body>
+</html>
