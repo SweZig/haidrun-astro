@@ -4,7 +4,7 @@ dist/
 # local build tooling / scratch (not part of the site)
 _prototype.html
 _shot_*.png
-_shot.mjs
+_shot*.mjs
 npm-debug.log*
 .DS_Store
 .env
