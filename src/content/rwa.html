@@ -6,6 +6,52 @@
     <div class="hero-cta"><div class="btn btn-primary" data-nav="contact">Request a demo</div><div class="btn btn-ghost" data-nav="tokenization">See tokenization</div></div>
   </div></div>
 
+  <!-- RWA CONCEPT: asset constellation -->
+  <section class="blk" style="padding-bottom:0"><div class="wrap">
+    <div class="sol-vis" style="max-width:560px">
+      <svg viewBox="0 0 720 420" role="img" aria-label="Real-world asset classes converging into a single tokenized platform on Haidrun">
+        <defs>
+          <linearGradient id="rwaHex" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3DEBAA"/><stop offset=".55" stop-color="#2AD0E6"/><stop offset="1" stop-color="#B06BF2"/></linearGradient>
+          <radialGradient id="rwaGlow" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="rgba(42,208,230,.18)"/><stop offset="1" stop-color="rgba(42,208,230,0)"/></radialGradient>
+        </defs>
+        <circle cx="360" cy="210" r="200" fill="url(#rwaGlow)"/>
+        <circle cx="360" cy="210" r="150" fill="none" stroke="rgba(138,151,168,.16)" stroke-width="1" stroke-dasharray="3 8"/>
+        <!-- connectors -->
+        <g stroke="rgba(42,208,230,.30)" stroke-width="1.4">
+          <line x1="360" y1="210" x2="360" y2="60"/><line x1="360" y1="210" x2="490" y2="135"/><line x1="360" y1="210" x2="490" y2="285"/>
+          <line x1="360" y1="210" x2="360" y2="360"/><line x1="360" y1="210" x2="230" y2="285"/><line x1="360" y1="210" x2="230" y2="135"/>
+        </g>
+        <!-- center token hexagon + Haidrun mark -->
+        <path d="M360 150 L412 180 L412 240 L360 270 L308 240 L308 180 Z" fill="url(#rwaHex)" opacity=".16"/>
+        <path d="M360 150 L412 180 L412 240 L360 270 L308 240 L308 180 Z" fill="none" stroke="url(#rwaHex)" stroke-width="2"/>
+        <g transform="translate(342,192) scale(.3)" fill="none" stroke="#EEF2F7" stroke-width="12" stroke-linecap="round"><line x1="30" y1="26" x2="30" y2="94"/><line x1="90" y1="26" x2="90" y2="94"/><path d="M30 60 C 45 38, 51 38, 60 60 C 69 82, 75 82, 90 60"/></g>
+        <text x="360" y="300" text-anchor="middle" fill="#8A97A8" font-size="11" font-family="JetBrains Mono" letter-spacing="1.5">ON-CHAIN TOKEN</text>
+        <!-- asset nodes -->
+        <g stroke-linecap="round" stroke-linejoin="round" fill="none">
+          <!-- Securities (top) -->
+          <circle cx="360" cy="60" r="30" fill="#0c1220" stroke="rgba(61,235,170,.4)" stroke-width="1.3"/>
+          <g transform="translate(349,49) scale(.92)" stroke="#3DEBAA" stroke-width="1.7"><path d="M3 21h18"/><path d="M6 21V11"/><path d="M11 21V5"/><path d="M16 21v-8"/><path d="M21 21V8"/></g>
+          <!-- Funds -->
+          <circle cx="490" cy="135" r="30" fill="#0c1220" stroke="rgba(42,208,230,.4)" stroke-width="1.3"/>
+          <g transform="translate(479,124) scale(.92)" stroke="#2AD0E6" stroke-width="1.7"><path d="M12 3 2 8l10 5 10-5-10-5z"/><path d="M2 13l10 5 10-5"/><path d="M2 18l10 5 10-5"/></g>
+          <!-- Real estate -->
+          <circle cx="490" cy="285" r="30" fill="#0c1220" stroke="rgba(176,107,242,.4)" stroke-width="1.3"/>
+          <g transform="translate(479,274) scale(.92)" stroke="#B06BF2" stroke-width="1.7"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-6h6v6"/></g>
+          <!-- Private credit (bottom) -->
+          <circle cx="360" cy="360" r="30" fill="#0c1220" stroke="rgba(61,235,170,.4)" stroke-width="1.3"/>
+          <g transform="translate(349,349) scale(.92)" stroke="#3DEBAA" stroke-width="1.7"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M9 13h6"/><path d="M9 17h4"/></g>
+          <!-- Commodities -->
+          <circle cx="230" cy="285" r="30" fill="#0c1220" stroke="rgba(42,208,230,.4)" stroke-width="1.3"/>
+          <g transform="translate(219,274) scale(.92)" stroke="#2AD0E6" stroke-width="1.7"><path d="M12 2 2 7v10l10 5 10-5V7z"/><path d="M2 7l10 5 10-5"/><path d="M12 22V12"/></g>
+          <!-- Carbon -->
+          <circle cx="230" cy="135" r="30" fill="#0c1220" stroke="rgba(176,107,242,.4)" stroke-width="1.3"/>
+          <g transform="translate(219,124) scale(.92)" stroke="#B06BF2" stroke-width="1.7"><path d="M11 20A7 7 0 0 1 9.8 6.1C13 4 17 4 20 3c1 3 1 7-1.1 10.2A7 7 0 0 1 11 20z"/><path d="M9 18c3-6 6-8 9-9"/></g>
+        </g>
+      </svg>
+    </div>
+    <div class="sol-cap">Any real-world asset — <span class="grad">one tokenized platform</span></div>
+  </div></section>
+
   <!-- ASSET CLASSES -->
   <section class="blk"><div class="wrap">
     <div class="sec-head"><span class="eyebrow"><span class="node"></span>Asset classes</span><h2>One platform for every asset</h2><p>Issue and manage a full range of real-world assets on the same private, compliant infrastructure.</p></div>
