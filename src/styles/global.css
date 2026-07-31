@@ -265,7 +265,7 @@
   
 
 
-    .hxArch{width:100%;max-width:600px;margin:0 auto;font-family:'Inter',system-ui,sans-serif}
+    .hxArch{width:100%;max-width:1120px;margin:0 auto;font-family:'Inter',system-ui,sans-serif}
     .hxArch .hxArch-svg{display:block;width:100%;height:auto}
     .hxArch .hxArch-pulse{animation:hxArchFlow 3.2s ease-in-out infinite}
     .hxArch .hxArch-pulse-b{animation-delay:1.6s}
@@ -308,7 +308,7 @@
   
 
 
-    .hxDashboard{width:100%;max-width:none;margin:0 auto;font-family:'Inter',system-ui,sans-serif;color:#f1f5f9}
+    .hxDashboard{width:100%;max-width:1120px;margin:0 auto;font-family:'Inter',system-ui,sans-serif;color:#f1f5f9}
     .hxDashboard .hxDashboard-win{width:100%;background:#0c111a;border:1px solid rgba(255,255,255,.10);border-radius:16px;overflow:hidden;box-shadow:0 40px 100px rgba(0,0,0,.6)}
     .hxDashboard .hxDashboard-bar{display:flex;align-items:center;gap:6px;padding:11px 15px;border-bottom:1px solid rgba(255,255,255,.10);background:#0f1520}
     .hxDashboard .hxDashboard-bar i{width:9px;height:9px;border-radius:50%;background:#2a3444;display:inline-block}
@@ -338,7 +338,7 @@
   
 
 
-    .hxArch{width:100%;max-width:600px;margin:0 auto;font-family:'Inter',system-ui,sans-serif}
+    .hxArch{width:100%;max-width:1120px;margin:0 auto;font-family:'Inter',system-ui,sans-serif}
     .hxArch .hxArch-svg{display:block;width:100%;height:auto}
     .hxArch .hxArch-pulse{animation:hxArchFlow 3.2s ease-in-out infinite}
     .hxArch .hxArch-pulse-b{animation-delay:1.6s}
@@ -381,7 +381,7 @@
   
 
 
-    .hxDashboard{width:100%;max-width:none;margin:0 auto;font-family:'Inter',system-ui,sans-serif;color:#f1f5f9}
+    .hxDashboard{width:100%;max-width:1120px;margin:0 auto;font-family:'Inter',system-ui,sans-serif;color:#f1f5f9}
     .hxDashboard .hxDashboard-win{width:100%;background:#0c111a;border:1px solid rgba(255,255,255,.10);border-radius:16px;overflow:hidden;box-shadow:0 40px 100px rgba(0,0,0,.6)}
     .hxDashboard .hxDashboard-bar{display:flex;align-items:center;gap:6px;padding:11px 15px;border-bottom:1px solid rgba(255,255,255,.10);background:#0f1520}
     .hxDashboard .hxDashboard-bar i{width:9px;height:9px;border-radius:50%;background:#2a3444;display:inline-block}
