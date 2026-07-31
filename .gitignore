@@ -23,3 +23,5 @@ _gfx.mjs
 _gfx_*.png
 _sec.mjs
 _sec_*.png
+_wp/
+_res.mjs
