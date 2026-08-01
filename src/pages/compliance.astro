@@ -1,0 +1,32 @@
+---
+import Layout from '../layouts/Layout.astro';
+import bodyRaw from '../content/compliance.html?raw';
+import mapSvg from '../content/_worldmap.svg?raw';
+const body = bodyRaw.replace('<!--WORLDMAP-->', mapSvg);
+---
+<Layout title="Regulatory Coverage — Stablecoin frameworks by jurisdiction | Haidrun" description="Where the major stablecoin regulatory frameworks stand worldwide as of August 2026 — MiCA, the GENIUS Act, VARA and more — and how Haidrun is built for compatibility." path="/compliance">
+  <Fragment set:html={body} />
+</Layout>
+<script>
+  function initJmap(){
+    const map = document.querySelector('.jmap');
+    if(!map) return;
+    const panel = document.getElementById('jmap-detail');
+    const pins = map.querySelectorAll('.pin');
+    const cards = {};
+    document.querySelectorAll('.jcard').forEach(function(c){ cards[c.dataset.jur] = c; });
+    function select(k){
+      const c = cards[k]; if(!c || !panel) return;
+      panel.innerHTML = c.innerHTML;
+      pins.forEach(function(p){ p.classList.toggle('active', p.dataset.jur === k); });
+      c.classList.add('flash');
+      setTimeout(function(){ c.classList.remove('flash'); }, 1200);
+    }
+    pins.forEach(function(p){
+      p.addEventListener('click', function(){ select(p.dataset.jur); });
+      p.addEventListener('keydown', function(e){ if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); select(p.dataset.jur); } });
+    });
+  }
+  if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initJmap);
+  else initJmap();
+</script>

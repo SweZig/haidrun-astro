@@ -760,3 +760,46 @@
 .spec-row:first-of-type{border-top:none}
 .spec-row b{color:var(--frost); font-weight:500}
 .spec-badge{margin-top:1.1rem; font-family:var(--font-mono); font-size:.68rem; letter-spacing:.08em; text-transform:uppercase; color:var(--cyan); border:1px solid rgba(42,208,230,.3); border-radius:99px; padding:.35rem .8rem; display:inline-block; position:relative}
+
+/* ---- regulatory coverage map (/compliance) ---- */
+.jmap-stamp{display:inline-flex; align-items:center; gap:.5rem; font-family:var(--font-mono); font-size:.72rem; letter-spacing:.08em; text-transform:uppercase; color:var(--cyan); border:1px solid rgba(42,208,230,.3); background:rgba(42,208,230,.06); border-radius:99px; padding:.3rem .8rem; margin-top:1rem}
+.jmap-stamp .d{width:6px; height:6px; border-radius:50%; background:var(--green)}
+.jmap-legend{display:flex; gap:1.4rem; flex-wrap:wrap; margin:.4rem 0 1.3rem; font-size:.85rem}
+.jmap-legend .lg{display:inline-flex; align-items:center; gap:.5rem; color:var(--mist)}
+.jmap-legend .sw{width:11px; height:11px; border-radius:50%; flex:none}
+.jmap-legend .sw.in{background:#3DEBAA}
+.jmap-legend .sw.phase{background:#2AD0E6}
+.jmap-legend .sw.dev{background:#B06BF2}
+.jmap{display:grid; grid-template-columns:1.6fr .9fr; gap:1.4rem; align-items:start; margin-top:.4rem}
+@media(max-width:900px){.jmap{grid-template-columns:1fr}}
+.jmap-fig{border:1px solid var(--slate); border-radius:16px; background:radial-gradient(120% 130% at 50% 0,rgba(42,208,230,.06),transparent 60%),#0b0f16; padding:.4rem; overflow:hidden}
+.jmap-svg{width:100%; height:auto; display:block}
+.jmap-geo .geo{fill:#151b26; stroke:#232d3c; stroke-width:.5}
+.jmap-pins .pin{cursor:pointer}
+.jmap-pins .pin-halo{fill:rgba(255,255,255,.05); transition:fill .25s}
+.jmap-pins .pin-ring{fill:none; stroke-width:1.5}
+.jmap-pins .pin.in .pin-ring,.jmap-pins .pin.in .pin-dot{stroke:#3DEBAA; fill:#3DEBAA}
+.jmap-pins .pin.phase .pin-ring,.jmap-pins .pin.phase .pin-dot{stroke:#2AD0E6; fill:#2AD0E6}
+.jmap-pins .pin.dev .pin-ring,.jmap-pins .pin.dev .pin-dot{stroke:#B06BF2; fill:#B06BF2}
+.jmap-pins .pin .pin-ring{fill:none}
+.jmap-pins .pin:hover .pin-halo,.jmap-pins .pin:focus .pin-halo{fill:rgba(255,255,255,.14)}
+.jmap-pins .pin.active .pin-halo{fill:rgba(255,255,255,.2)}
+.jmap-pins .pin:focus{outline:none}
+.jmap-panel{border:1px solid var(--slate); border-radius:16px; background:linear-gradient(180deg,var(--graphite),#10151d); padding:1.4rem 1.45rem; min-height:230px; position:sticky; top:84px}
+@media(max-width:900px){.jmap-panel{position:static; top:auto}}
+.jmap-panel .jp-ph{color:var(--mist); font-size:.92rem}
+.jmap-panel .jp-ph b{color:var(--frost)}
+.jmap-fatf{border:1px solid rgba(42,208,230,.3); background:rgba(42,208,230,.05); border-radius:12px; padding:.9rem 1.1rem; margin:1.4rem 0 0; font-size:.88rem; color:#c4ccd6}
+.jmap-fatf b{color:var(--cyan); font-family:var(--font-mono); font-size:.8rem; letter-spacing:.06em}
+.jmap-list{display:grid; gap:1rem; grid-template-columns:repeat(auto-fit,minmax(255px,1fr)); margin-top:1.6rem}
+.jcard{border:1px solid var(--slate); border-radius:14px; padding:1.2rem 1.3rem; background:rgba(20,26,36,.5); scroll-margin-top:80px; transition:border-color .25s}
+.jcard.flash{border-color:rgba(42,208,230,.6)}
+.jc-top{display:flex; align-items:center; gap:.55rem; margin-bottom:.35rem}
+.jc-status{width:10px; height:10px; border-radius:50%; flex:none}
+.jc-status.in{background:#3DEBAA}.jc-status.phase{background:#2AD0E6}.jc-status.dev{background:#B06BF2}
+.jcard h3{font-family:var(--font-display); font-weight:600; font-size:1.06rem}
+.jc-fw{font-family:var(--font-mono); font-size:.8rem; color:var(--cyan); margin-bottom:.15rem}
+.jc-meta{font-family:var(--font-mono); font-size:.68rem; letter-spacing:.05em; text-transform:uppercase; color:var(--mist); margin-bottom:.7rem}
+.jcard p{color:#c4ccd6; font-size:.89rem; margin:.35rem 0}
+.jc-hd{font-size:.82rem; color:var(--green); margin-top:.7rem; padding-top:.6rem; border-top:1px solid rgba(42,52,68,.6)}
+.jmap-disc{border:1px solid var(--slate); border-left:2px solid var(--violet); border-radius:12px; padding:1rem 1.2rem; background:rgba(176,107,242,.05); color:var(--mist); font-size:.82rem; margin-top:2rem; line-height:1.6}

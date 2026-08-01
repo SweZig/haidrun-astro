@@ -1,0 +1,131 @@
+<div class="page" id="page-compliance">
+
+  <!-- HERO -->
+  <div class="hero"><div class="wrap hero-inner">
+    <span class="eyebrow kicker"><span class="node"></span>Regulatory · Coverage</span>
+    <h1>The stablecoin <span class="grad">regulatory map</span></h1>
+    <p class="sub">Where the major stablecoin frameworks stand around the world — and how Haidrun is built for compatibility with each. Select a jurisdiction to see the framework, its status and what it requires.</p>
+    <span class="jmap-stamp"><span class="d"></span>As of August 2026 · informational, subject to change</span>
+  </div></div>
+
+  <!-- MAP + PANEL -->
+  <section class="blk" style="padding-top:1rem"><div class="wrap jmap-wrap">
+    <div class="jmap-legend">
+      <span class="lg"><span class="sw in"></span>In force</span>
+      <span class="lg"><span class="sw phase"></span>Phasing in</span>
+      <span class="lg"><span class="sw dev"></span>Under development</span>
+    </div>
+    <div class="jmap">
+      <div class="jmap-fig"><!--WORLDMAP--></div>
+      <div class="jmap-panel" id="jmap-detail" aria-live="polite">
+        <p class="jp-ph"><b>Select a jurisdiction</b><br>Click a marker on the map — or pick from the list below — to see the applicable framework, its current status and key requirements, as of August 2026.</p>
+      </div>
+    </div>
+    <div class="jmap-fatf"><b>FATF · GLOBAL</b> &nbsp;The FATF standards (AML/CFT and the “Travel Rule”) apply across jurisdictions rather than in one country. Haidrun is built for compatibility: real-time AML monitoring, risk-based limits and sanctions screening against EU, UN and OFAC lists.<!-- TODO: legal sign-off on compliance framing --></div>
+  </div></section>
+
+  <!-- ALL JURISDICTIONS (static, source of truth + SEO / no-JS) -->
+  <section class="blk" style="padding-top:0"><div class="wrap">
+    <div class="sec-head"><span class="eyebrow"><span class="node"></span>All jurisdictions</span><h2>Framework by jurisdiction</h2><p>A snapshot as of August 2026. Frameworks and timelines evolve — confirm current status with the relevant regulator.</p></div>
+    <div class="jmap-list">
+
+      <article class="jcard" id="jc-eu" data-jur="eu" data-status="in">
+        <div class="jc-top"><span class="jc-status in"></span><h3>European Union</h3></div>
+        <div class="jc-fw">MiCA — Markets in Crypto-Assets</div>
+        <div class="jc-meta">In force · since 2024 · EBA + national authorities</div>
+        <p>E-money tokens (EMTs) and asset-referenced tokens (ARTs) are regulated: only authorised credit or e-money institutions may issue, under reserve, custody, redemption-at-par and white-paper requirements.</p>
+        <p class="jc-hd">Haidrun — built for compatibility: on-chain reserve attestation, HSM key custody, complaints workflow (Art. 71).</p>
+      </article>
+
+      <article class="jcard" id="jc-us" data-jur="us" data-status="phase">
+        <div class="jc-top"><span class="jc-status phase"></span><h3>United States</h3></div>
+        <div class="jc-fw">GENIUS Act</div>
+        <div class="jc-meta">Phasing in · law 2025, rules through 2026–2027 · OCC / Fed / FDIC + state regimes</div>
+        <p>Payment stablecoins must be fully backed 1:1 with cash or high-quality liquid assets, with monthly reserve attestation, redemption at par and a permitted-issuer regime.</p>
+        <p class="jc-hd">Haidrun — built for compatibility: 1:1 reserves with real-time tracking and attestation.</p>
+      </article>
+
+      <article class="jcard" id="jc-uk" data-jur="uk" data-status="phase">
+        <div class="jc-top"><span class="jc-status phase"></span><h3>United Kingdom</h3></div>
+        <div class="jc-fw">FCA + Bank of England regime</div>
+        <div class="jc-meta">Phasing in · draft rules 2026 · FCA + Bank of England</div>
+        <p>Fiat-backed stablecoin issuance will require FCA authorisation, with systemic issuers jointly overseen by the Bank of England and safeguards on backing and redemption.</p>
+        <p class="jc-hd">Haidrun — built for compatibility.</p>
+      </article>
+
+      <article class="jcard" id="jc-sg" data-jur="sg" data-status="in">
+        <div class="jc-top"><span class="jc-status in"></span><h3>Singapore</h3></div>
+        <div class="jc-fw">MAS Single-Currency Stablecoin framework</div>
+        <div class="jc-meta">In force · since 2023 · Monetary Authority of Singapore</div>
+        <p>Single-currency stablecoins must hold 1:1 reserves in low-risk assets, redeem at par within a set window, and issue under MAS licensing.</p>
+        <p class="jc-hd">Haidrun — built for compatibility.</p>
+      </article>
+
+      <article class="jcard" id="jc-hk" data-jur="hk" data-status="in">
+        <div class="jc-top"><span class="jc-status in"></span><h3>Hong Kong</h3></div>
+        <div class="jc-fw">Stablecoins Ordinance</div>
+        <div class="jc-meta">In force · since Aug 2025 · HKMA</div>
+        <p>Fiat-referenced stablecoin issuers need an HKMA licence, local incorporation, minimum paid-up capital, and full reserve backing with redemption rights.</p>
+        <p class="jc-hd">Haidrun — built for compatibility.</p>
+      </article>
+
+      <article class="jcard" id="jc-uae" data-jur="uae" data-status="in">
+        <div class="jc-top"><span class="jc-status in"></span><h3>United Arab Emirates</h3></div>
+        <div class="jc-fw">CBUAE Payment Token · VARA · ADGM</div>
+        <div class="jc-meta">In force · since 2024 · CBUAE + VARA (Dubai) + ADGM</div>
+        <p>Payment-token issuance requires 1:1 backing and segregation of customer reserves, under the central bank regime plus the VARA and ADGM virtual-asset frameworks.</p>
+        <p class="jc-hd">Haidrun — built for compatibility (VARA is named in our compliance framework).</p>
+      </article>
+
+      <article class="jcard" id="jc-jp" data-jur="jp" data-status="in">
+        <div class="jc-top"><span class="jc-status in"></span><h3>Japan</h3></div>
+        <div class="jc-fw">Payment Services Act</div>
+        <div class="jc-meta">In force · since 2023 · JFSA</div>
+        <p>Stablecoins are treated as electronic payment instruments; issuance is limited to licensed banks, trust companies and fund-transfer providers, with reserve rules evolving.</p>
+        <p class="jc-hd">Haidrun — built for compatibility.</p>
+      </article>
+
+      <article class="jcard" id="jc-ca" data-jur="ca" data-status="dev">
+        <div class="jc-top"><span class="jc-status dev"></span><h3>Canada</h3></div>
+        <div class="jc-fw">Value-referenced crypto-asset rules</div>
+        <div class="jc-meta">Under development · securities regulators (CSA)</div>
+        <p>Issuer registration and reserve expectations for value-referenced crypto assets are being developed and refined as of August 2026.</p>
+      </article>
+
+      <article class="jcard" id="jc-br" data-jur="br" data-status="dev">
+        <div class="jc-top"><span class="jc-status dev"></span><h3>Brazil</h3></div>
+        <div class="jc-fw">Virtual-asset / stablecoin regime</div>
+        <div class="jc-meta">Under development · Banco Central do Brasil</div>
+        <p>A virtual-asset service-provider framework covering stablecoins is progressing through consultation, with attention to foreign-currency stablecoin use.</p>
+      </article>
+
+      <article class="jcard" id="jc-kr" data-jur="kr" data-status="dev">
+        <div class="jc-top"><span class="jc-status dev"></span><h3>South Korea</h3></div>
+        <div class="jc-fw">Digital-asset legislation</div>
+        <div class="jc-meta">Under development · FSC</div>
+        <p>Digital-asset legislation, including proposals for won-denominated stablecoins, is progressing through 2026.</p>
+      </article>
+
+      <article class="jcard" id="jc-au" data-jur="au" data-status="dev">
+        <div class="jc-top"><span class="jc-status dev"></span><h3>Australia</h3></div>
+        <div class="jc-fw">Payment-stablecoin reforms</div>
+        <div class="jc-meta">Under development · Treasury / ASIC</div>
+        <p>Payment-stablecoin and digital-asset platform reforms are under consultation as of August 2026.</p>
+      </article>
+
+      <article class="jcard" id="jc-ch" data-jur="ch" data-status="dev">
+        <div class="jc-top"><span class="jc-status dev"></span><h3>Switzerland</h3></div>
+        <div class="jc-fw">FINMA guidance</div>
+        <div class="jc-meta">Guidance-based · FINMA</div>
+        <p>No dedicated stablecoin statute; FINMA applies existing banking, AML and financial-market rules to stablecoin issuance.</p>
+      </article>
+
+    </div>
+
+    <div class="jmap-disc">This overview reflects our understanding of the stablecoin regulatory landscape <b>as of August 2026</b>. It is provided for information only, is not legal advice, and is subject to change as rules evolve. Haidrun is <b>built for compatibility</b> with these frameworks; nothing here is a claim of licensure or registration in any jurisdiction.<!-- TODO: legal sign-off required before this page goes public at launch --></div>
+  </div></section>
+
+  <!-- CTA -->
+  <section class="blk"><div class="wrap"><div class="cta"><h2>Compliance built into the platform</h2><p>KYB, KYC/AML, reserves and audit are native to Haidrun — engineered for the frameworks above. Talk to us about your markets.</p><div class="row"><div class="btn btn-primary" data-nav="contact">Request a demo</div><div class="btn btn-ghost" data-nav="security">Security &amp; compliance</div></div></div></div></section>
+
+</div>
