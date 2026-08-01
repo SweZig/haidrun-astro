@@ -88,6 +88,9 @@
   .sol-card:hover .sol-thumb{border-color:rgba(42,208,230,.4)}
   .sol-card .sol-thumb svg{display:block; max-width:100%; height:auto}
   .sol-card .lnk{margin-top:auto}
+  /* differentiator cards: monoline icon badge */
+  .diff-ic{width:44px; height:44px; border-radius:11px; display:flex; align-items:center; justify-content:center; margin-bottom:1rem; transition:transform .3s}
+  .card:hover .diff-ic{transform:translateY(-2px)}
 
   /* three layers */
   .layers{display:grid; gap:1rem}
