@@ -1,9 +1,22 @@
 <div class="page" id="page-stablecoin-issuance">
-  <div class="hero"><div class="wrap hero-inner">
-    <span class="eyebrow kicker"><span class="node"></span>Solutions · Stablecoin Issuance</span>
-    <h1>Issue your own stablecoin — <span class="grad">in weeks</span></h1>
-    <p class="sub">Mint, manage and redeem a fully backed stablecoin on infrastructure you control — with reserves, lifecycle and compliance built in from day one.</p>
-    <div class="hero-cta"><div class="btn btn-primary" data-nav="contact">Request a demo</div></div>
+  <div class="hero"><div class="wrap hero-grid">
+    <div class="hero-inner">
+      <span class="eyebrow kicker"><span class="node"></span>Solutions · Stablecoin Issuance</span>
+      <h1>Issue your own stablecoin — <span class="grad">in weeks</span></h1>
+      <p class="sub">Mint, manage and redeem a fully backed stablecoin on infrastructure you control — with reserves, lifecycle and compliance built in from day one.</p>
+      <div class="hero-cta"><div class="btn btn-primary" data-nav="contact">Request a demo</div></div>
+    </div>
+    <div class="hero-visual">
+      <div class="spec-card">
+        <div class="spec-coin"><span class="c">€</span><span class="l">Your stablecoin</span></div>
+        <div class="spec-ticker">hEUR <!-- TODO: example ticker; customer-issued --></div>
+        <div class="spec-row"><span>Backing</span><b>1 : 1 · fully reserved</b></div>
+        <div class="spec-row"><span>Network</span><b>Haidrun private L1</b></div>
+        <div class="spec-row"><span>Standard</span><b>HVM · EVM-compatible</b></div>
+        <div class="spec-row"><span>Model</span><b>HSC · mint &amp; burn</b></div>
+        <span class="spec-badge">White-label · your brand</span>
+      </div>
+    </div>
   </div></div>
   <section class="blk"><div class="wrap">
     <div class="sec-head"><span class="eyebrow"><span class="node"></span>Key capabilities</span></div>
@@ -27,8 +40,24 @@
     </div>
     <div class="sol-cap">Total supply reconciles deterministically against reserves — <span class="grad">no off-chain assumptions</span></div>
   </div></section>
+
+  <div class="divider"></div>
+
+  <!-- TOKEN LIFECYCLE -->
   <section class="blk"><div class="wrap">
-    <div class="sec-head"><span class="eyebrow"><span class="node"></span>How it works</span></div>
+    <div class="sec-head"><span class="eyebrow"><span class="node"></span>Token lifecycle</span><h2>Mint, circulate, redeem, burn</h2><p>The full lifecycle of your stablecoin runs on-platform — with the master issuer keys secured in FIPS 140-3 Level 3 HSMs.</p></div>
+    <div class="rwa-flow">
+      <div class="rwa-stage s1"><span class="sico"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#3DEBAA" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v8"/><path d="M8 12h8"/></svg></span><div class="stp">01 · MINT</div><h4>Mint</h4><p>Issue new supply against verified reserves, authorised by master issuer keys in the HSM.</p></div>
+      <div class="rwa-stage s2"><span class="sico"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#2AD0E6" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 15-6.7L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-15 6.7L3 16"/><path d="M3 21v-5h5"/></svg></span><div class="stp">02 · CIRCULATE</div><h4>Circulate</h4><p>Move value through payments, wallets and settlement — compliant on every transfer.</p></div>
+      <div class="rwa-stage s3"><span class="sico"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#B06BF2" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 14 4 9l5-5"/><path d="M4 9h11a5 5 0 0 1 0 10h-4"/></svg></span><div class="stp">03 · REDEEM</div><h4>Redeem</h4><p>Instant redemption at par via API, with an SLA guarantee and a clear UI.</p></div>
+      <div class="rwa-stage s4"><span class="sico"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#3DEBAA" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12h8"/></svg></span><div class="stp">04 · BURN</div><h4>Burn</h4><p>Retire supply on redemption — total supply always reconciles to reserves.</p></div>
+    </div>
+  </div></section>
+
+  <div class="divider"></div>
+
+  <section class="blk"><div class="wrap">
+    <div class="sec-head"><span class="eyebrow"><span class="node"></span>Go live</span><h2>Turnkey, in weeks</h2></div>
     <div class="steps">
       <div class="step"><div class="n">1</div><h4>Deploy</h4><p>Deploy the network in your perimeter.</p></div>
       <div class="step"><div class="n">2</div><h4>Configure</h4><p>Configure your token and reserve policy.</p></div>

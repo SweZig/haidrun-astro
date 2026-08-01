@@ -739,3 +739,15 @@
 .rcpt-row b{color:var(--frost); font-weight:500}
 .rcpt-status{display:flex; align-items:center; gap:.5rem; margin-top:1rem; padding-top:1rem; border-top:1px solid var(--slate); color:var(--green); font-size:.85rem; font-weight:600; position:relative}
 .rcpt-status .t{margin-left:auto; font-family:var(--font-mono); color:var(--mist); font-weight:400}
+
+/* stablecoin: token spec card (hero) */
+.spec-card{border:1px solid var(--slate); border-radius:20px; padding:1.6rem; background:linear-gradient(180deg,rgba(24,31,43,.9),rgba(12,17,26,.95)); box-shadow:0 34px 80px -38px rgba(0,0,0,.85); max-width:340px; margin:0 auto; position:relative; overflow:hidden}
+.spec-card::before{content:""; position:absolute; inset:0; background:radial-gradient(80% 55% at 0% 0%,rgba(61,235,170,.14),transparent 60%),radial-gradient(80% 55% at 100% 100%,rgba(176,107,242,.14),transparent 60%); pointer-events:none}
+.spec-coin{display:flex; align-items:center; gap:.7rem; position:relative}
+.spec-coin .c{width:46px; height:46px; border-radius:50%; background:var(--aurora); display:flex; align-items:center; justify-content:center; color:#05221a; font-family:var(--font-display); font-weight:700; font-size:1.3rem; flex:none}
+.spec-coin .l{font-family:var(--font-mono); font-size:.64rem; letter-spacing:.14em; text-transform:uppercase; color:var(--mist)}
+.spec-ticker{font-family:var(--font-display); font-weight:700; font-size:1.9rem; letter-spacing:-.01em; margin:.85rem 0 1rem; position:relative}
+.spec-row{display:flex; justify-content:space-between; font-size:.82rem; padding:.42rem 0; border-top:1px solid rgba(42,52,68,.6); color:var(--mist); position:relative}
+.spec-row:first-of-type{border-top:none}
+.spec-row b{color:var(--frost); font-weight:500}
+.spec-badge{margin-top:1.1rem; font-family:var(--font-mono); font-size:.68rem; letter-spacing:.08em; text-transform:uppercase; color:var(--cyan); border:1px solid rgba(42,208,230,.3); border-radius:99px; padding:.35rem .8rem; display:inline-block; position:relative}
