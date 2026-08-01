@@ -772,9 +772,9 @@
 .jmap-legend .sw.dev{background:#B06BF2}
 .jmap{display:grid; grid-template-columns:1.6fr .9fr; gap:1.4rem; align-items:start; margin-top:.4rem}
 @media(max-width:900px){.jmap{grid-template-columns:1fr}}
-.jmap-fig{border:1px solid var(--slate); border-radius:16px; background:radial-gradient(120% 130% at 50% 0,rgba(42,208,230,.06),transparent 60%),#0b0f16; padding:.4rem; overflow:hidden}
+.jmap-fig{border:1px solid var(--slate); border-radius:16px; background:radial-gradient(120% 130% at 50% 0,rgba(42,208,230,.1),transparent 62%),#0e1420; padding:.4rem; overflow:hidden}
 .jmap-svg{width:100%; height:auto; display:block}
-.jmap-geo .geo{fill:#151b26; stroke:#232d3c; stroke-width:.5}
+.jmap-geo .geo{fill:#2b3646; stroke:#41505f; stroke-width:.6}
 .jmap-pins .pin{cursor:pointer}
 .jmap-pins .pin-halo{fill:rgba(255,255,255,.05); transition:fill .25s}
 .jmap-pins .pin-ring{fill:none; stroke-width:1.5}
