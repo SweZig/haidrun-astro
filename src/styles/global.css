@@ -803,3 +803,14 @@
 .jcard p{color:#c4ccd6; font-size:.89rem; margin:.35rem 0}
 .jc-hd{font-size:.82rem; color:var(--green); margin-top:.7rem; padding-top:.6rem; border-top:1px solid rgba(42,52,68,.6)}
 .jmap-disc{border:1px solid var(--slate); border-left:2px solid var(--violet); border-radius:12px; padding:1rem 1.2rem; background:rgba(176,107,242,.05); color:var(--mist); font-size:.82rem; margin-top:2rem; line-height:1.6}
+
+/* regulatory map v2 — filled countries + glow pins (new _worldmap.svg) */
+.jmap-country{transition:fill-opacity .2s}
+.jmap-pins .jmap-pin{cursor:pointer}
+.jmap-pins .jmap-pin__halo{transition:r .2s, fill-opacity .2s}
+.jmap-pins .jmap-pin__core{transition:r .2s}
+.jmap-pins .jmap-pin:focus{outline:none}
+.jmap-pins .jmap-pin:hover .jmap-pin__halo,.jmap-pins .jmap-pin:focus .jmap-pin__halo{fill-opacity:.34; r:8}
+.jmap-pins .jmap-pin:hover .jmap-pin__core,.jmap-pins .jmap-pin:focus .jmap-pin__core{r:3.4}
+.jmap-pins .jmap-pin.active .jmap-pin__halo{fill-opacity:.42; r:8.5}
+.jmap-pins .jmap-pin.active .jmap-pin__core{r:3.7}

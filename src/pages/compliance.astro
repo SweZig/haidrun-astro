@@ -12,7 +12,7 @@ const body = bodyRaw.replace('<!--WORLDMAP-->', mapSvg);
     const map = document.querySelector('.jmap');
     if(!map) return;
     const panel = document.getElementById('jmap-detail');
-    const pins = map.querySelectorAll('.pin');
+    const pins = map.querySelectorAll('.jmap-pin, .pin');
     const cards = {};
     document.querySelectorAll('.jcard').forEach(function(c){ cards[c.dataset.jur] = c; });
     function select(k){
