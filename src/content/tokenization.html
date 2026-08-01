@@ -1,9 +1,25 @@
 <div class="page" id="page-tokenization">
-  <div class="hero"><div class="wrap hero-inner">
-    <span class="eyebrow kicker"><span class="node"></span>Solutions · Tokenization</span>
-    <h1>Programmable tokens, <span class="grad">compliant by design</span></h1>
-    <p class="sub">Represent value as programmable digital tokens on your own private chain — with compliance, lifecycle and settlement native to the platform. For real-world assets specifically, see RWA.</p>
-    <div class="hero-cta"><div class="btn btn-primary" data-nav="contact">Request a demo</div><div class="btn btn-ghost" data-nav="rwa">Explore RWA →</div></div>
+  <div class="hero"><div class="wrap hero-grid">
+    <div class="hero-inner">
+      <span class="eyebrow kicker"><span class="node"></span>Solutions · Tokenization</span>
+      <h1>Programmable tokens, <span class="grad">compliant by design</span></h1>
+      <p class="sub">Represent value as programmable digital tokens on your own private chain — with compliance, lifecycle and settlement native to the platform. For real-world assets specifically, see RWA.</p>
+      <div class="hero-cta"><div class="btn btn-primary" data-nav="contact">Request a demo</div><div class="btn btn-ghost" data-nav="rwa">Explore RWA →</div></div>
+    </div>
+    <div class="hero-visual">
+      <div class="api-sample" style="max-width:380px;margin:0 auto">
+        <div class="api-head"><span class="api-verb" style="background:var(--violet)">SOL</span> BrandToken.sol · HVM</div>
+<pre><span class="c">// compliance in the contract</span>
+<span class="k">function</span> _beforeTransfer(
+  address to, uint256 amt
+) <span class="k">internal override</span> {
+  <span class="k">require</span>(
+    whitelist.isEligible(to),
+    <span class="s">"recipient not eligible"</span>
+  );
+}</pre>
+      </div>
+    </div>
   </div></div>
   <section class="blk"><div class="wrap">
     <div class="sec-head"><span class="eyebrow"><span class="node"></span>Key capabilities</span></div>
