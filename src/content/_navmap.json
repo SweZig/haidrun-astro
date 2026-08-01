@@ -12,6 +12,7 @@
   "pricing": "/pricing",
   "resources": "/resources",
   "developers": "/developers",
+  "developers-api": "/developers/api",
   "company": "/company",
   "contact": "/contact"
 }

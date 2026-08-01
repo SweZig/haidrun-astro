@@ -1,0 +1,7 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import body from '../../content/developers-api.html?raw';
+---
+<Layout title="API Reference — Developers | Haidrun" description="The Haidrun REST API for regulated digital money: authentication, payments, wallets, stablecoins, KYC/KYB and complaints. OAuth 2.0, mutual TLS and OpenAPI." path="/developers/api">
+  <Fragment set:html={body} />
+</Layout>
