@@ -82,6 +82,12 @@
   .card h3{font-family:var(--font-display); font-weight:600; font-size:1.16rem; margin:.55rem 0 .5rem}
   .card p{color:#c4ccd6; font-size:.92rem}
   .card .lnk{display:inline-block; margin-top:.8rem; font-family:var(--font-mono); font-size:.75rem; color:var(--cyan); cursor:pointer}
+  /* solution cards with mini-graphic thumbnail */
+  .sol-card{display:flex; flex-direction:column}
+  .sol-card .sol-thumb{height:112px; border-radius:12px; margin-bottom:1.1rem; background:radial-gradient(130% 150% at 50% 0,rgba(42,208,230,.09),transparent 62%),#0b0f16; border:1px solid var(--slate); display:flex; align-items:center; justify-content:center; overflow:hidden; transition:border-color .3s}
+  .sol-card:hover .sol-thumb{border-color:rgba(42,208,230,.4)}
+  .sol-card .sol-thumb svg{display:block; max-width:100%; height:auto}
+  .sol-card .lnk{margin-top:auto}
 
   /* three layers */
   .layers{display:grid; gap:1rem}
