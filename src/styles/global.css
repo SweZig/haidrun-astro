@@ -702,3 +702,40 @@
 .wal-li .amt.in{color:var(--green)}
 .tok-wrap{text-align:center; margin-top:1rem}
 .tok-wrap svg{display:inline-block; width:300px; max-width:100%}
+
+/* ---- solution modules (differentiated section library) ---- */
+/* stat band */
+.sol-stats{display:grid; grid-template-columns:repeat(4,1fr); border:1px solid var(--slate); border-radius:16px; overflow:hidden; margin-top:1rem; background:rgba(20,26,36,.4)}
+@media(max-width:720px){.sol-stats{grid-template-columns:1fr 1fr}}
+.sol-stat{padding:1.3rem 1.25rem; border-right:1px solid var(--slate)}
+.sol-stat:last-child{border-right:none}
+@media(max-width:720px){.sol-stat:nth-child(2){border-right:none}.sol-stat:nth-child(1),.sol-stat:nth-child(2){border-bottom:1px solid var(--slate)}}
+.sol-stat .v{font-family:var(--font-display); font-weight:700; font-size:1.55rem; letter-spacing:-.02em}
+.sol-stat .v.grad{font-weight:700}
+.sol-stat .k{color:var(--mist); font-size:.8rem; margin-top:.3rem; line-height:1.4}
+/* comparison */
+.cmp{display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-top:1rem}
+@media(max-width:640px){.cmp{grid-template-columns:1fr}}
+.cmp-col{border:1px solid var(--slate); border-radius:16px; padding:1.4rem; background:linear-gradient(180deg,var(--graphite),#10151d)}
+.cmp-col.on{border-color:rgba(61,235,170,.4); box-shadow:0 20px 50px -30px rgba(61,235,170,.4)}
+.cmp-col .h{font-family:var(--font-mono); font-size:.72rem; letter-spacing:.14em; text-transform:uppercase; color:var(--mist); margin-bottom:1rem}
+.cmp-col.on .h{color:var(--green)}
+.cmp-row{display:flex; gap:.6rem; align-items:flex-start; padding:.6rem 0; border-top:1px solid rgba(42,52,68,.6); font-size:.9rem; color:#c4ccd6}
+.cmp-row:first-of-type{border-top:none}
+.cmp-row svg{flex:none; margin-top:.2rem}
+.cmp-row .muted{color:var(--mist)}
+/* API / code sample */
+.api-sample{border:1px solid var(--slate); border-radius:14px; overflow:hidden; margin-top:1rem; background:#0b0f16; max-width:760px}
+.api-head{display:flex; align-items:center; gap:.55rem; padding:.7rem 1rem; border-bottom:1px solid var(--slate); font-family:var(--font-mono); font-size:.76rem; color:var(--mist)}
+.api-verb{color:#05221a; background:var(--green); border-radius:5px; padding:.1rem .45rem; font-weight:600; font-size:.72rem}
+.api-sample pre{margin:0; padding:1rem 1.2rem; font-family:var(--font-mono); font-size:.82rem; line-height:1.75; color:#c4ccd6; overflow-x:auto}
+.api-sample .k{color:#2AD0E6}.api-sample .s{color:#8fe9c4}.api-sample .c{color:#6b7787}.api-sample .r{color:#3DEBAA}
+/* hero settlement receipt */
+.rcpt{border:1px solid var(--slate); border-radius:18px; padding:1.5rem; background:linear-gradient(180deg,rgba(24,31,43,.9),rgba(12,17,26,.95)); box-shadow:0 34px 80px -38px rgba(0,0,0,.85); max-width:340px; margin:0 auto; position:relative; overflow:hidden}
+.rcpt::before{content:""; position:absolute; inset:0; background:radial-gradient(80% 50% at 100% 0%,rgba(61,235,170,.12),transparent 60%); pointer-events:none}
+.rcpt-top{display:flex; justify-content:space-between; align-items:center; font-family:var(--font-mono); font-size:.66rem; letter-spacing:.12em; text-transform:uppercase; color:var(--mist); position:relative}
+.rcpt-amt{font-family:var(--font-display); font-weight:700; font-size:2rem; letter-spacing:-.02em; margin:.7rem 0 1rem; position:relative}
+.rcpt-row{display:flex; justify-content:space-between; font-size:.82rem; color:var(--mist); padding:.32rem 0; position:relative}
+.rcpt-row b{color:var(--frost); font-weight:500}
+.rcpt-status{display:flex; align-items:center; gap:.5rem; margin-top:1rem; padding-top:1rem; border-top:1px solid var(--slate); color:var(--green); font-size:.85rem; font-weight:600; position:relative}
+.rcpt-status .t{margin-left:auto; font-family:var(--font-mono); color:var(--mist); font-weight:400}

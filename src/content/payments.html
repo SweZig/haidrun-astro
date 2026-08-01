@@ -1,21 +1,35 @@
 <div class="page" id="page-payments">
-  <div class="hero"><div class="wrap hero-inner">
-    <span class="eyebrow kicker"><span class="node"></span>Solutions · Payments &amp; Settlement</span>
-    <h1>Move money instantly — <span class="grad">and settle with certainty</span></h1>
-    <p class="sub">A payment and settlement engine built for regulated money: fast, low-cost and final. Cross-border and domestic, B2B and B2C, on infrastructure you control.</p>
-    <div class="hero-cta"><div class="btn btn-primary" data-nav="contact">Request a demo</div></div>
+  <div class="hero"><div class="wrap hero-grid">
+    <div class="hero-inner">
+      <span class="eyebrow kicker"><span class="node"></span>Solutions · Payments &amp; Settlement</span>
+      <h1>Move money instantly — <span class="grad">and settle with certainty</span></h1>
+      <p class="sub">A payment and settlement engine built for regulated money: fast, low-cost and final. Cross-border and domestic, B2B and B2C, on infrastructure you control.</p>
+      <div class="hero-cta"><div class="btn btn-primary" data-nav="contact">Request a demo</div><div class="btn btn-ghost" data-nav="developers">Read the docs</div></div>
+    </div>
+    <div class="hero-visual">
+      <div class="rcpt">
+        <div class="rcpt-top"><span>Settlement</span><span>EUR</span></div>
+        <div class="rcpt-amt">€240,000.00</div>
+        <div class="rcpt-row"><span>From</span><b>Neobank AB</b></div>
+        <div class="rcpt-row"><span>To</span><b>Fintech Ltd</b></div>
+        <div class="rcpt-row"><span>Reference</span><b>invoice-4821</b></div>
+        <div class="rcpt-status"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3DEBAA" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg> Settled <span class="t">finality 0.42 s</span></div>
+      </div>
+    </div>
   </div></div>
+
+  <!-- STAT BAND -->
   <section class="blk"><div class="wrap">
-    <div class="sec-head"><span class="eyebrow"><span class="node"></span>Key capabilities</span></div>
-    <div class="flist">
-      <div class="fitem"><h4>Instant settlement</h4><p>Deterministic finality in under 500 ms. Once settled, a payment is final and irreversible.</p></div>
-      <div class="fitem"><h4>High throughput</h4><p>15,000–30,000 TPS in production, engineered through intelligent batching and parallel HSM signing.</p></div>
-      <div class="fitem"><h4>Custodial wallets</h4><p>Bank-managed client wallets with per-client HSM keys; corporate treasury flows with corporate keys.</p></div>
-      <div class="fitem"><h4>Event-driven &amp; reliable</h4><p>Asynchronous processing with exactly-once semantics and webhook confirmations.</p></div>
-      <div class="fitem"><h4>Cross-border &amp; multi-currency</h4><p>Move value across borders without the cost and delay of legacy rails.</p></div>
+    <div class="sol-stats">
+      <div class="sol-stat"><div class="v grad">&lt; 500 ms</div><div class="k">Deterministic finality</div></div>
+      <div class="sol-stat"><div class="v grad">15k–30k</div><div class="k">TPS in production</div></div>
+      <div class="sol-stat"><div class="v grad">99.99%</div><div class="k">Availability</div></div>
+      <div class="sol-stat"><div class="v grad">Exactly-once</div><div class="k">Event processing</div></div>
     </div>
   </div></section>
-  <section class="blk"><div class="wrap">
+
+  <!-- SETTLEMENT FLOW -->
+  <section class="blk" style="padding-top:0"><div class="wrap">
     <div class="sec-head"><span class="eyebrow"><span class="node"></span>How it works</span><h2>Submitted to settled, in under 500 ms</h2></div>
     <div class="rwa-flow">
       <div class="rwa-stage s1"><span class="sico"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#3DEBAA" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4z"/></svg></span><div class="stp">01 · SUBMIT</div><h4>Submit</h4><p>A REST API request, validated at the gateway with AML, risk-based limits and sanctions screening.</p></div>
@@ -23,11 +37,59 @@
       <div class="rwa-stage s3"><span class="sico"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#B06BF2" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></span><div class="stp">03 · SETTLE</div><h4>Settle</h4><p>Broadcast to the Haidrun Network with deterministic finality in under 500&nbsp;ms.</p></div>
       <div class="rwa-stage s4"><span class="sico"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#3DEBAA" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg></span><div class="stp">04 · CONFIRM</div><h4>Confirm</h4><p>Webhook confirmation with exactly-once semantics — final and irreversible.</p></div>
     </div>
-    <div class="sol-cap">End to end in <span class="grad">under 500 ms</span> · exactly-once · irreversible</div>
-    <p style="color:#c4ccd6; max-width:70ch">A transaction is submitted via REST API, validated at the gateway, batched, signed once per batch inside the HSM, broadcast to the Haidrun Network, and confirmed to you by webhook in under 500 ms.</p>
+  </div></section>
+
+  <div class="divider"></div>
+
+  <!-- COMPARISON -->
+  <section class="blk"><div class="wrap">
+    <div class="sec-head"><span class="eyebrow"><span class="node"></span>Why it's different</span><h2>Legacy rails vs Haidrun</h2><p>The same payment, on infrastructure built for regulated digital money instead of decades-old batch systems.</p></div>
+    <div class="cmp">
+      <div class="cmp-col">
+        <div class="h">Legacy rails</div>
+        <div class="cmp-row"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6b7787" stroke-width="2.4" stroke-linecap="round"><path d="M18 6 6 18"/><path d="M6 6l12 12"/></svg><span class="muted">Settles in 1–3 business days</span></div>
+        <div class="cmp-row"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6b7787" stroke-width="2.4" stroke-linecap="round"><path d="M18 6 6 18"/><path d="M6 6l12 12"/></svg><span class="muted">Banking hours and cut-off times</span></div>
+        <div class="cmp-row"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6b7787" stroke-width="2.4" stroke-linecap="round"><path d="M18 6 6 18"/><path d="M6 6l12 12"/></svg><span class="muted">Revocable — reversals and chargebacks</span></div>
+        <div class="cmp-row"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6b7787" stroke-width="2.4" stroke-linecap="round"><path d="M18 6 6 18"/><path d="M6 6l12 12"/></svg><span class="muted">Intermediaries and FX spreads</span></div>
+        <div class="cmp-row"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6b7787" stroke-width="2.4" stroke-linecap="round"><path d="M18 6 6 18"/><path d="M6 6l12 12"/></svg><span class="muted">Compliance bolted on, in batches</span></div>
+      </div>
+      <div class="cmp-col on">
+        <div class="h">Haidrun</div>
+        <div class="cmp-row"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3DEBAA" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Deterministic finality in under 500 ms</div>
+        <div class="cmp-row"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3DEBAA" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>24 / 7 / 365 at 99.99% availability</div>
+        <div class="cmp-row"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3DEBAA" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Final and irreversible once settled</div>
+        <div class="cmp-row"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3DEBAA" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Direct settlement, no intermediaries</div>
+        <div class="cmp-row"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3DEBAA" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Compliance native, screened in real time</div>
+      </div>
+    </div>
+  </div></section>
+
+  <div class="divider"></div>
+
+  <!-- API SAMPLE -->
+  <section class="blk"><div class="wrap">
+    <div class="sec-head"><span class="eyebrow"><span class="node"></span>Built API-first</span><h2>One request to move money</h2><p>Submit a payment over a versioned REST API secured with OAuth 2.0 and mutual TLS — and get a final confirmation back.</p></div>
+    <div class="api-sample">
+      <div class="api-head"><span class="api-verb">POST</span> /v1/payments</div>
+      <pre><span class="c">// request</span>
+{
+  <span class="k">"from"</span>: <span class="s">"wallet_9f2a…"</span>,
+  <span class="k">"to"</span>: <span class="s">"wallet_7c1b…"</span>,
+  <span class="k">"amount"</span>: <span class="s">"240000.00"</span>,
+  <span class="k">"currency"</span>: <span class="s">"EUR"</span>,
+  <span class="k">"reference"</span>: <span class="s">"invoice-4821"</span>
+}
+
+<span class="c">// 201 Created</span>
+{
+  <span class="k">"id"</span>: <span class="s">"pay_1a2b…"</span>,
+  <span class="k">"status"</span>: <span class="r">"settled"</span>,
+  <span class="k">"finality_ms"</span>: <span class="r">420</span>,
+  <span class="k">"tx"</span>: <span class="s">"0x…"</span>
+}</pre>
+    </div>
     <div class="note" style="margin-top:1.6rem">Every transaction runs through built-in AML monitoring, risk-based limits and sanctions screening. Built for compatibility with MiCA, the GENIUS Act, FATF and VARA. <!-- TODO: legal sign-off --></div>
   </div></section>
-  <section class="blk"><div class="wrap"><div class="cta"><h2>Settle in under 500 ms</h2><p>See the payment and settlement engine in action.</p><div class="row"><div class="btn btn-primary" data-nav="contact">Request a demo</div></div></div></div></section>
-</div>
 
-<!-- ============================ TOKENIZATION ============================ -->
+  <section class="blk"><div class="wrap"><div class="cta"><h2>Settle in under 500 ms</h2><p>See the payment and settlement engine in action.</p><div class="row"><div class="btn btn-primary" data-nav="contact">Request a demo</div><div class="btn btn-ghost" data-nav="developers">Read the docs</div></div></div></div></section>
+</div>
