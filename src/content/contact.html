@@ -5,13 +5,15 @@
     <p class="sub">See how Haidrun can power your stablecoin, payments, RWA and tokenization strategy. Tell us what you’re building and we’ll set up a demo with our team.</p>
   </div></div>
   <section class="blk"><div class="wrap" style="display:grid; gap:2.4rem; grid-template-columns:1fr">
-    <form class="formgrid" onsubmit="return false">
-      <div class="field"><label>Name</label><input type="text" placeholder="Your name"></div>
-      <div class="field"><label>Work email</label><input type="email" placeholder="you@company.com"></div>
-      <div class="field"><label>Company</label><input type="text" placeholder="Company"></div>
-      <div class="field"><label>Role</label><input type="text" placeholder="Your role"></div>
-      <div class="field full"><label>What are you building?</label><textarea rows="4" placeholder="Tell us about your use case"></textarea></div>
-      <div class="field full" style="display:flex; gap:.6rem; align-items:flex-start"><input type="checkbox" style="width:auto; margin-top:.35rem"><label style="margin:0; text-transform:none; letter-spacing:0; font-family:var(--font-body); color:var(--mist)">I agree to be contacted about my request and have read the <a href="/privacy/" style="color:var(--cyan); text-decoration:underline">Privacy Policy</a>. <!-- TODO: INTEGRATION: consent + CRM --></label></div>
+    <form class="formgrid" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you/">
+      <input type="hidden" name="form-name" value="contact">
+      <p hidden><label>Leave this field empty: <input name="bot-field"></label></p>
+      <div class="field"><label for="cf-name">Name</label><input id="cf-name" name="name" type="text" placeholder="Your name" required></div>
+      <div class="field"><label for="cf-email">Work email</label><input id="cf-email" name="email" type="email" placeholder="you@company.com" required></div>
+      <div class="field"><label for="cf-company">Company</label><input id="cf-company" name="company" type="text" placeholder="Company"></div>
+      <div class="field"><label for="cf-role">Role</label><input id="cf-role" name="role" type="text" placeholder="Your role"></div>
+      <div class="field full"><label for="cf-msg">What are you building?</label><textarea id="cf-msg" name="message" rows="4" placeholder="Tell us about your use case"></textarea></div>
+      <div class="field full" style="display:flex; gap:.6rem; align-items:flex-start"><input id="cf-consent" name="consent" type="checkbox" value="yes" required style="width:auto; margin-top:.35rem"><label for="cf-consent" style="margin:0; text-transform:none; letter-spacing:0; font-family:var(--font-body); color:var(--mist)">I agree to be contacted about my request and have read the <a href="/privacy/" style="color:var(--cyan); text-decoration:underline">Privacy Policy</a>.</label></div>
       <div class="full"><button class="btn btn-primary" type="submit">Request a demo</button></div>
     </form>
     <div>
@@ -21,7 +23,7 @@
         <div class="step"><div class="n">2</div><h4>We schedule</h4><p>We schedule a demo tailored to your use case.</p></div>
         <div class="step"><div class="n">3</div><h4>Pilot to production</h4><p>We map a path from pilot to production.</p></div>
       </div>
-      <p style="color:var(--mist); margin-top:1.2rem">Book a time directly <!-- TODO: INPUT: calendar link --> · Office: Stockholm, Sweden. <!-- TODO: INTEGRATION: CRM + calendar + spam/consent. Thank-you page = noindex. --></p>
+      <p style="color:var(--mist); margin-top:1.2rem">We’ll get back to you by email · Office: Stockholm, Sweden.</p>
     </div>
   </div></section>
 </div>

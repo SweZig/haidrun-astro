@@ -1,0 +1,7 @@
+---
+import Layout from '../layouts/Layout.astro';
+import body from '../content/thank-you.html?raw';
+---
+<Layout title="Thank you — Haidrun" description="Your request has been received." path="/thank-you" noindex={true}>
+  <Fragment set:html={body} />
+</Layout>
