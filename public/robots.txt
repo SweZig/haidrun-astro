@@ -1,3 +1,0 @@
-# STAGING — not for indexing. Replace at production launch (haidrun.io).
-User-agent: *
-Disallow: /
