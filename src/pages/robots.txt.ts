@@ -4,7 +4,7 @@ import type { APIRoute } from 'astro';
 // Staging (PUBLIC_INDEXABLE unset/false)  -> Disallow everything.
 // Production launch (PUBLIC_INDEXABLE=true) -> Allow all + Sitemap.
 const indexable = import.meta.env.PUBLIC_INDEXABLE === 'true';
-const site = 'https://haidrun.io';
+const site = 'https://haidrun.com';
 
 const body = indexable
   ? `User-agent: *\nAllow: /\n\nSitemap: ${site}/sitemap-index.xml\n`

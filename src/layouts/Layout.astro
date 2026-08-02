@@ -24,7 +24,7 @@ export interface Props {
   noindex?: boolean;
 }
 const { title, description, path, noindex = false } = Astro.props;
-const site = Astro.site ?? new URL('https://haidrun.io');
+const site = Astro.site ?? new URL('https://haidrun.com');
 const canonical = new URL(path, site).href;
 const ogImage = new URL('/og-default.png', site).href;
 
@@ -36,7 +36,7 @@ const orgSchema = {
   '@type': 'Organization',
   name: 'Haidrun',
   legalName: 'Haidrun AB',
-  url: 'https://haidrun.io',
+  url: 'https://haidrun.com',
   sameAs: [
     'https://www.linkedin.com/company/haidrun',
     'https://github.com/haidrun',

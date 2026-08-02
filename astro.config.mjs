@@ -1,9 +1,9 @@
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 
-// Canonical domain per beslut-domanstrategi (Scenario A): haidrun.io
+// Canonical production domain: haidrun.com (owner decision 2026-08-02, reverses earlier .io choice).
 export default defineConfig({
-  site: 'https://haidrun.io',
+  site: 'https://haidrun.com',
   integrations: [sitemap()],
   build: { format: 'directory' },
 });

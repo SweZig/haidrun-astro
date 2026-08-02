@@ -1,6 +1,6 @@
 # Haidrun website (Astro)
 
-Multi-page marketing site for **haidrun.io** (canonical domain per the .io/.com
+Multi-page marketing site for **haidrun.com** (canonical domain per the .io/.com
 domain decision — Scenario A). Converted from the single-file v0.99A prototype
 into an Astro static site: one indexable URL per page, per-page `<title>`/meta,
 canonical tags, Open Graph/Twitter cards, Organization JSON-LD and an
