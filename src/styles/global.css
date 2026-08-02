@@ -814,3 +814,14 @@
 .jmap-pins .jmap-pin:hover .jmap-pin__core,.jmap-pins .jmap-pin:focus .jmap-pin__core{r:3.4}
 .jmap-pins .jmap-pin.active .jmap-pin__halo{fill-opacity:.42; r:8.5}
 .jmap-pins .jmap-pin.active .jmap-pin__core{r:3.7}
+
+/* regulatory map — zoom/pan controls */
+.jmap-fig{position:relative}
+.jmap-fig .jmap-svg{cursor:grab; touch-action:none}
+.jmap-fig .jmap-svg.grabbing{cursor:grabbing}
+.jmap-zoom{position:absolute; top:.6rem; right:.6rem; display:flex; flex-direction:column; gap:.35rem; z-index:2}
+.jmap-zoom button{width:30px; height:30px; border-radius:8px; border:1px solid var(--slate); background:rgba(11,15,23,.85); color:var(--frost); font-family:var(--font-mono); font-size:1rem; line-height:1; cursor:pointer; display:flex; align-items:center; justify-content:center; transition:border-color .2s, background .2s}
+.jmap-zoom button:hover{border-color:rgba(42,208,230,.5); background:rgba(20,26,36,.95)}
+.jmap-zoom button:focus-visible{outline:2px solid rgba(42,208,230,.6); outline-offset:1px}
+.jmap-hint{position:absolute; left:.7rem; bottom:.55rem; font-family:var(--font-mono); font-size:.66rem; letter-spacing:.04em; color:var(--mist); background:rgba(11,15,23,.6); padding:.2rem .5rem; border-radius:6px; pointer-events:none}
+@media(max-width:560px){.jmap-hint{display:none}}

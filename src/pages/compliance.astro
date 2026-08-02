@@ -22,10 +22,69 @@ const body = bodyRaw.replace('<!--WORLDMAP-->', mapSvg);
       c.classList.add('flash');
       setTimeout(function(){ c.classList.remove('flash'); }, 1200);
     }
+    var suppressClick = false;
     pins.forEach(function(p){
-      p.addEventListener('click', function(){ select(p.dataset.jur); });
+      p.addEventListener('click', function(){ if(suppressClick) return; select(p.dataset.jur); });
       p.addEventListener('keydown', function(e){ if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); select(p.dataset.jur); } });
     });
+
+    // ---- pan / zoom (viewBox) ----
+    var svg = map.querySelector('.jmap-svg');
+    if(svg){
+      var BASE = { x:0, y:0, w:1000, h:500 };
+      var view = { x:0, y:0, w:1000, h:500 };
+      var MIN_W = BASE.w / 6;              // max zoom ~6x
+      var AR = BASE.h / BASE.w;
+      function apply(){ svg.setAttribute('viewBox', view.x + ' ' + view.y + ' ' + view.w + ' ' + view.h); }
+      function clampPan(){
+        view.x = Math.max(BASE.x, Math.min(view.x, BASE.x + BASE.w - view.w));
+        view.y = Math.max(BASE.y, Math.min(view.y, BASE.y + BASE.h - view.h));
+      }
+      function toSvg(clientX, clientY){
+        var r = svg.getBoundingClientRect();
+        return { x: view.x + (clientX - r.left) / r.width * view.w, y: view.y + (clientY - r.top) / r.height * view.h };
+      }
+      function zoomAt(factor, clientX, clientY){
+        var nw = Math.max(MIN_W, Math.min(BASE.w, view.w * factor));
+        var nh = nw * AR;
+        var pt = toSvg(clientX, clientY);
+        view.x = pt.x - (pt.x - view.x) * (nw / view.w);
+        view.y = pt.y - (pt.y - view.y) * (nh / view.h);
+        view.w = nw; view.h = nh; clampPan(); apply();
+      }
+      svg.addEventListener('wheel', function(e){ e.preventDefault(); zoomAt(e.deltaY > 0 ? 1.15 : 1/1.15, e.clientX, e.clientY); }, { passive:false });
+
+      var dragging = false, captured = false, moved = 0, lastX = 0, lastY = 0, pid = null;
+      svg.addEventListener('pointerdown', function(e){
+        dragging = true; captured = false; moved = 0; suppressClick = false;
+        lastX = e.clientX; lastY = e.clientY; pid = e.pointerId;
+      });
+      svg.addEventListener('pointermove', function(e){
+        if(!dragging) return;
+        var r = svg.getBoundingClientRect();
+        var dx = (e.clientX - lastX) / r.width * view.w;
+        var dy = (e.clientY - lastY) / r.height * view.h;
+        moved += Math.abs(e.clientX - lastX) + Math.abs(e.clientY - lastY);
+        // only start a real pan (and capture the pointer) once past the click threshold
+        if(moved > 4 && !captured){
+          captured = true; suppressClick = true; svg.classList.add('grabbing');
+          if(svg.setPointerCapture){ try{ svg.setPointerCapture(pid); }catch(_){} }
+        }
+        if(captured){ view.x -= dx; view.y -= dy; clampPan(); apply(); }
+        lastX = e.clientX; lastY = e.clientY;
+      });
+      function endDrag(){ dragging = false; captured = false; svg.classList.remove('grabbing'); }
+      svg.addEventListener('pointerup', endDrag);
+      svg.addEventListener('pointercancel', endDrag);
+
+      var zc = map.querySelector('.jmap-zoom');
+      if(zc){
+        function centerZoom(f){ var r = svg.getBoundingClientRect(); zoomAt(f, r.left + r.width/2, r.top + r.height/2); }
+        var bi = zc.querySelector('[data-z="in"]'); if(bi) bi.addEventListener('click', function(){ centerZoom(1/1.4); });
+        var bo = zc.querySelector('[data-z="out"]'); if(bo) bo.addEventListener('click', function(){ centerZoom(1.4); });
+        var br = zc.querySelector('[data-z="reset"]'); if(br) br.addEventListener('click', function(){ view = { x:0, y:0, w:BASE.w, h:BASE.h }; apply(); });
+      }
+    }
   }
   if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initJmap);
   else initJmap();
