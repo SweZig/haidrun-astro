@@ -825,3 +825,15 @@
 .jmap-zoom button:focus-visible{outline:2px solid rgba(42,208,230,.6); outline-offset:1px}
 .jmap-hint{position:absolute; left:.7rem; bottom:.55rem; font-family:var(--font-mono); font-size:.66rem; letter-spacing:.04em; color:var(--mist); background:rgba(11,15,23,.6); padding:.2rem .5rem; border-radius:6px; pointer-events:none}
 @media(max-width:560px){.jmap-hint{display:none}}
+
+/* pricing matrix v2 (owner FINAL_4) — sub-lines, identical-tint, group note, pack, legend */
+.pr-matrix .pr-sub{display:block; color:var(--mist); font-size:.72rem; line-height:1.45; margin-top:.15rem; font-weight:400}
+.pr-matrix tr.same td{background:rgba(61,235,170,.04)}
+.pr-matrix tr.same td.feat-col{background:rgba(61,235,170,.08)}
+.pr-matrix .grp .grp-note{display:block; text-transform:none; letter-spacing:0; color:var(--mist); font-family:var(--font-body); font-size:.82rem; font-weight:400; margin-top:.4rem; line-height:1.5; max-width:96ch}
+.pr-matrix .grp .grp-note b{color:var(--green); font-weight:600}
+.pr-legend{display:flex; gap:1.6rem; flex-wrap:wrap; margin-top:1rem; font-size:.8rem; color:var(--mist)}
+.pr-legend b{color:var(--frost)}
+.pr-pack{display:flex; gap:1.5rem; align-items:center; justify-content:space-between; flex-wrap:wrap; border:1px solid var(--slate); border-radius:14px; padding:1.2rem 1.4rem; background:linear-gradient(180deg,var(--graphite),#10151d); margin-top:1.6rem}
+.pr-pack b{display:block; font-family:var(--font-display); font-weight:600; font-size:1rem; color:var(--frost); margin-bottom:.25rem}
+.pr-pack span{color:var(--mist); font-size:.9rem; max-width:78ch}
