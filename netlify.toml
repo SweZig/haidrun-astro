@@ -62,6 +62,19 @@
   status = 301
   force = true
 
+# Old WordPress home alias -> new home.
+[[redirects]]
+  from = "/home/"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/home"
+  to = "/"
+  status = 301
+  force = true
+
 # Retired DPP product / industry pages -> Solutions hub.
 # NOTE: enumerated explicitly with force = true. On this Netlify site the non-forced
 # ("shadow") wildcard fallback was NOT applied — dead paths 404'd and some still served

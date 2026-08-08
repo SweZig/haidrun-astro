@@ -25,7 +25,12 @@ export interface Props {
 }
 const { title, description, path, noindex = false } = Astro.props;
 const site = Astro.site ?? new URL('https://haidrun.com');
-const canonical = new URL(path, site).href;
+// Canonical must be the final, non-redirecting URL. The site builds in `directory` format
+// (pages served at /page/) and the sitemap uses trailing slashes, so normalize the path to
+// match. Otherwise the no-slash canonical (e.g. /company) 301-redirects to /company/ and
+// shows up as "Page with redirect" in Search Console — a canonical pointing at a redirect.
+const canonicalPath = path.endsWith('/') ? path : `${path}/`;
+const canonical = new URL(canonicalPath, site).href;
 const ogImage = new URL('/og-default.png', site).href;
 
 // Staging guard: default to NON-indexable. Flip PUBLIC_INDEXABLE=true at production launch.
