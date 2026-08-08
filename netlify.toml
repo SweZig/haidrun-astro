@@ -16,3 +16,62 @@
 
 [context.branch-deploy.environment]
   PUBLIC_INDEXABLE = "false"
+
+# ---------------------------------------------------------------------------
+# Legacy haidrun.com (old WordPress / DPP site) -> new Astro site. Added 2026-08-08.
+# The old site pushed a traceability / Digital Product Passport narrative; the DPP
+# line is retired and haidrun.com is now the canonical domain for the digital-money
+# platform. These 301s consolidate the old URLs' link equity onto the new pages and
+# stop Google seeing two conflicting narratives on one domain.
+#
+# force = true is required for pages that STILL serve old 200 content at deploy time
+# (verified 2026-08-08: /about/ and /press/* return old Swedish DPP / IoT content,
+# served by a layer outside this repo — a migration-time fallback to old WordPress).
+# netlify.toml redirects are the highest-precedence layer, so a forced rule wins even
+# over that fallback for the listed paths.
+#
+# Order matters (first match wins): specific forced rules first, non-forced wildcard
+# safety nets last so they ONLY fire on otherwise-404 legacy paths and never shadow
+# real new pages such as /solutions/payments/ or /resources/.
+# ---------------------------------------------------------------------------
+
+# Old "About" page (still live, old Swedish DPP copy) -> new Company page.
+[[redirects]]
+  from = "/about/"
+  to = "/company/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/about"
+  to = "/company/"
+  status = 301
+  force = true
+
+# Old 2021 press / PR articles (enterprise blockchain, IoT, insurance, telecoms) -> Company.
+[[redirects]]
+  from = "/press/*"
+  to = "/company/"
+  status = 301
+  force = true
+
+# Old Swedish FAQ page -> home (no direct equivalent on the new site).
+[[redirects]]
+  from = "/fragor-och-svar/"
+  to = "/"
+  status = 301
+  force = true
+
+# Retired DPP product / industry pages (e.g. /solutions/tracker/, /solutions/dpp/,
+# /solutions/blockchain-in-insurance/) -> Solutions hub. Non-forced: real new
+# sub-pages keep serving normally; only dead legacy paths redirect.
+[[redirects]]
+  from = "/solutions/*"
+  to = "/solutions/"
+  status = 301
+
+# Old educational resources (blockchain 101 etc.) -> new Resources page. Non-forced.
+[[redirects]]
+  from = "/resources/*"
+  to = "/resources/"
+  status = 301
