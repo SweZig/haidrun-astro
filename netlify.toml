@@ -62,16 +62,64 @@
   status = 301
   force = true
 
-# Retired DPP product / industry pages (e.g. /solutions/tracker/, /solutions/dpp/,
-# /solutions/blockchain-in-insurance/) -> Solutions hub. Non-forced: real new
-# sub-pages keep serving normally; only dead legacy paths redirect.
+# Retired DPP product / industry pages -> Solutions hub.
+# NOTE: enumerated explicitly with force = true. On this Netlify site the non-forced
+# ("shadow") wildcard fallback was NOT applied — dead paths 404'd and some still served
+# stale edge-cached old content. Forcing wins over both. Safe because these exact paths
+# have no matching new page (a forced /solutions/* wildcard would instead shadow real
+# sub-pages like /solutions/payments/, so we list the known legacy URLs one by one).
 [[redirects]]
-  from = "/solutions/*"
+  from = "/solutions/tracker/"
   to = "/solutions/"
   status = 301
+  force = true
 
-# Old educational resources (blockchain 101 etc.) -> new Resources page. Non-forced.
 [[redirects]]
-  from = "/resources/*"
+  from = "/solutions/dpp/"
+  to = "/solutions/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/solutions/private-blockchain-in-telecoms/"
+  to = "/solutions/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/solutions/blockchain-food-supply-chain/"
+  to = "/solutions/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/solutions/blockchain-in-insurance/"
+  to = "/solutions/"
+  status = 301
+  force = true
+
+# Old educational resources (blockchain 101 etc.) -> new Resources page. Forced, enumerated
+# (a forced /resources/* wildcard would loop on the real /resources/ page).
+[[redirects]]
+  from = "/resources/what-is-blockchain-technology-and-how-does-it-work/"
   to = "/resources/"
   status = 301
+  force = true
+
+[[redirects]]
+  from = "/resources/benefits-of-blockchain-how-it-can-transform-an-industry/"
+  to = "/resources/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/resources/blockchain-for-social-good/"
+  to = "/resources/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/resources/blockchain-food-supply-chain/"
+  to = "/resources/"
+  status = 301
+  force = true
